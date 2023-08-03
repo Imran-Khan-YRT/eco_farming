@@ -1,0 +1,73 @@
+{
+    "_commant": "modify it to french or any other language",
+    "greeting": "Hello",
+    "navbar": {
+        "menu": {
+            "home": "Home",
+            "appFeatures": "App Features",
+            "microFinance": "Microfinance",
+            "contactUs": "Contact Us"
+        },
+        "button": {
+            "downloadSignUp": "Download/Sign Up"
+        }
+    },
+    "home": {
+        "overview": {
+            "title": "MIMODZI Overview",
+            "content": "Welcome to Mimodzi, your innovative farming application, the ultimate digital partner for modern farmers. Harness the power of Artificial Intelligence (AI) for precision farming at your fingertips.",
+            "button": {
+                "ourProducts": "Our Products",
+                "learnMore": "Learn more",
+                "projectDone": "Project Done",
+                "teamMembers": "Team Members"
+            }
+        }
+    },
+    "footer": {
+        "items": {
+            "downloadIOSApp": "Download IOS APP",
+            "downloadAndriodApp": "Download Android App",
+            "exploreAppFeatures": "Explore App Features",
+            "blog&news": "Blog & News",
+            "help": "Help and Support",
+            "contactUs": "Contact us",
+            "terms&Condition": "Terms & Condition",
+            "privacy": "Privacy and Policy"
+        }
+    },
+    "microfinance": {
+        "title": "Microfinance market place works",
+        "process_to_microfinance": {
+            "item1": "First download the MIMODZI app through Google Store and Apple Store.",
+            "item2": "MIMODZI is a platform where you can easily apply for agriculture loans.",
+            "item3": "Fill the application form and apply for the loan",
+            "item4": "AI could suggest the best loan options available based on the farmer's financial situation,"
+        },
+        "apply_for_loan": {
+            "title": "How To Apply for Loan",
+            "step": [
+                {
+                    "title": "Apply For Loan",
+                    "description": "Here you can click on Apply for Loan and the next screen open in which you will fill the form"
+                },
+                {
+                    "title": "Fill the Loan Application Form",
+                    "description": "In this stage You will Provide you Personal information and you crop Information "
+                },
+                {
+                    "title": "AI Based Loan Suggestion ",
+                    "description": "Here You can see the AI Based Loan Suggestion according to your best feasibility"
+                },
+                {
+                    "title": "Select Plan",
+                    "description": "In this Stage you can  Select the Loan Plan which is Suitable for you."
+                },
+                {
+                    "title": "Wait For Approval",
+                    "description": "After that your application submit to our company and the company will contact you soon"
+                }
+            ]
+        }
+    }
+}
