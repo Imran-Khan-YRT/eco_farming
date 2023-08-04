@@ -19,32 +19,48 @@ const ImageGrid = () => {
   );
 };
 
+const OverViewButtons = () => {
+  const overViewData = data.home.overview;
+  return (
+    <>
+      <FlexWrapper style="mt-10 gap-5">
+        <CustomButton>{overViewData.button.ourProducts}</CustomButton>
+        <CustomButton style="bg-tertiary text-black">{overViewData.button.learnMore}</CustomButton>
+      </FlexWrapper>
+      <FlexWrapper style="mt-10 gap-5">
+        <CustomButton style="bg-tertiary text-black">
+          <h1>456+</h1>
+          {overViewData.button.projectDone}
+        </CustomButton>
+        <CustomButton style="bg-tertiary text-black">
+          <h1>156+</h1>
+          {overViewData.button.teamMembers}
+        </CustomButton>
+      </FlexWrapper>
+    </>
+  );
+};
+
+const AppOffers = () => {
+  return <div>test</div>;
+};
+
 const Home = () => {
   const overViewData = data.home.overview;
   return (
-    <Container style="grid grid-cols-2">
-      <div className="justify-self-end px-40 pt-12 max-w-[650px]">
-        <Section title={overViewData.title} description={overViewData.content}></Section>
-        <FlexWrapper style="mt-10 gap-5">
-          <CustomButton>{overViewData.button.ourProducts}</CustomButton>
-          <CustomButton style="bg-tertiary text-black">{overViewData.button.learnMore}</CustomButton>
-        </FlexWrapper>
-        <FlexWrapper style="mt-10 gap-5">
-          <CustomButton style="bg-tertiary text-black">
-            <h1>456+</h1>
-            {overViewData.button.projectDone}
-          </CustomButton>
-          <CustomButton style="bg-tertiary text-black">
-            <h1>156+</h1>
-            {overViewData.button.teamMembers}
-          </CustomButton>
-        </FlexWrapper>
-      </div>
+    <>
+      <Container style="grid grid-cols-2">
+        <div className="justify-self-end px-40 pt-12 max-w-[650px]">
+          <Section title={overViewData.title} description={overViewData.content}></Section>
+          <OverViewButtons />
+        </div>
+        <div className="justify-self-end">
+          <ImageGrid />
+        </div>
+      </Container>
 
-      <div className="justify-self-end">
-        <ImageGrid />
-      </div>
-    </Container>
+      <AppOffers />
+    </>
   );
 };
 
