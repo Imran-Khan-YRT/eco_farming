@@ -1,13 +1,13 @@
 import React from "react";
-import Container from "../../Utils/CommonComponents/Container";
+import Container from "../CommonComponents/Container";
 import app_logo from "../../assets/app_logo.png";
 import { menuIcon } from "../../assets";
-import FlexWrapper from "../../Utils/CommonComponents/FlexWrapper";
+import FlexWrapper from "../CommonComponents/FlexWrapper";
 import data from "../../assets/combined/en/translation.json";
 import { Link } from "react-router-dom";
 import { getArrayFromObj } from "../../Utils/util";
-import CustomButton from "../../Utils/CommonComponents/CustomButton";
-import CustomImage from "../../Utils/CommonComponents/CustomImage";
+import CustomButton from "../CommonComponents/CustomButton";
+import CustomImage from "../CommonComponents/CustomImage";
 import useResponsive from "../../Utils/useResponsive";
 
 const HeaderPc = () => {
