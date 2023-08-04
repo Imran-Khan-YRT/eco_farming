@@ -7,10 +7,10 @@ interface ImageProps {
   alt: string;
 }
 
-const CustomImage: React.FC<ImageProps> = ({ src, alt, style }) => {
+const CustomImage: React.FC<ImageProps> = ({ src, alt, style = "" }) => {
   return (
     <div className={`${style}`}>
-      <img src={src} alt={alt} className="w-full h-full object-contain" />
+      <img src={src} alt={alt} className="w-full h-full object-cover rounded-lg" />
     </div>
   );
 };

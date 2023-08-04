@@ -16,13 +16,13 @@ const HeaderPc = () => {
     <Container style="px-12 py-4 shadow-md">
       <FlexWrapper style="justify-between">
         <CustomImage src={app_logo} alt="app_logo" style="w-12 h-12"></CustomImage>
-        <FlexWrapper gap="gap-8">
+        <FlexWrapper gap="gap-8" style="items-center">
           {headerData.map((menuItem) => (
             <Link to={menuItem.to} key={menuItem.to}>
               {menuItem.text}
             </Link>
           ))}
-          <CustomButton>{data.header.button.downloadSignUp}</CustomButton>
+          <CustomButton style="py-1">{data.header.button.downloadSignUp}</CustomButton>
         </FlexWrapper>
       </FlexWrapper>
     </Container>
