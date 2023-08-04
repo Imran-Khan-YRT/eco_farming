@@ -1,12 +1,24 @@
 {
     "greeting": "Hello",
-    "navbar": {
-        "menu": {
-            "home": "Home",
-            "appFeatures": "App Features",
-            "microFinance": "Microfinance",
-            "contactUs": "Contact Us"
-        },
+    "header": {
+        "menu": [
+            {
+                "to": "home",
+                "text": "Home"
+            },
+            {
+                "to": "features",
+                "text": "App Features"
+            },
+            {
+                "to": "microfinance",
+                "text": "Microfinance"
+            },
+            {
+                "to": "contact",
+                "text": "Contact Us"
+            }
+        ],
         "button": {
             "downloadSignUp": "Download/Sign Up"
         }

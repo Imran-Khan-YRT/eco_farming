@@ -1,7 +1,7 @@
 {
     "_commant": "modify it to french or any other language",
     "greeting": "Hello",
-    "navbar": {
+    "header": {
         "menu": {
             "home": "Home",
             "appFeatures": "App Features",
