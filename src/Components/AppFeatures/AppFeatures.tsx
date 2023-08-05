@@ -11,7 +11,7 @@ import { image1, image2 } from "../../assets";
 
 const CardContent = () => {
   return (
-    <FlexWrapper style="justify-between ">
+    <FlexWrapper className="justify-between ">
       <div className="w-1/2">
         <Section
           title={"The User Authentication in MIMODZI"}
@@ -21,14 +21,14 @@ const CardContent = () => {
         ></Section>
         <CustomButton>View User Authentication</CustomButton>
       </div>
-      <CustomImage src={image1} alt="features_image1" style="w-1/2" />
+      <CustomImage src={image1} alt="features_image1" className="w-1/2" />
     </FlexWrapper>
   );
 };
 
 const AppFeatures = () => {
   return (
-    <Container style="m-20 w-full">
+    <Container className="m-20 w-full">
       {/* <FlexWrapper style="justify-between items-center">
         <CustomImage src={feature_iphone13} alt="iphone13" style="" />
         <FlexWrapper flexDirection="flex-col">
@@ -42,6 +42,7 @@ const AppFeatures = () => {
         </FlexWrapper>
       </FlexWrapper> */}
       <CardContent />
+      test
     </Container>
   );
 };

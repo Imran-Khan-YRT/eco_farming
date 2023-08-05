@@ -4,11 +4,11 @@ interface FlexProps {
   children: ReactNode;
   flexDirection?: string;
   gap?: string;
-  style?: string;
+  className?: string;
 }
 
-const FlexWrapper: React.FC<FlexProps> = ({ children, flexDirection = "", gap = "", style = "" }) => {
-  return <div className={`flex  ${flexDirection} ${gap} ${style}`}>{children}</div>;
+const FlexWrapper: React.FC<FlexProps> = ({ children, flexDirection = "", gap = "", className = "" }) => {
+  return <div className={`flex  ${flexDirection} ${gap} ${className}`}>{children}</div>;
 };
 
 export default FlexWrapper;

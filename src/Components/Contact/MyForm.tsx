@@ -53,7 +53,7 @@ const MyForm: React.FC = () => {
             <ErrorMessage name="problems" component="div" className="error" />
           </div>
 
-          <CustomButton type="submit" disabled={isSubmitting} style="mt-4 md:w-[400px] w-[300px]">
+          <CustomButton type="submit" disabled={isSubmitting} className="mt-4 md:w-[400px] w-[300px]">
             Submit
           </CustomButton>
         </Form>

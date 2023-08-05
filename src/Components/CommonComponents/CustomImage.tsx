@@ -2,15 +2,15 @@ import React from "react";
 import { ReactNode } from "react";
 interface ImageProps {
   // must mention width and height in style
-  style: string;
+  className: string;
   src: string;
   alt: string;
   objectFit?: string;
 }
 
-const CustomImage: React.FC<ImageProps> = ({ src, alt, objectFit = "object-fill", style = "" }) => {
+const CustomImage: React.FC<ImageProps> = ({ src, alt, objectFit = "object-fill", className = "" }) => {
   return (
-    <div className={`${style}`}>
+    <div className={`${className}`}>
       <img src={src} alt={alt} className={`w-full h-full rounded-lg ${objectFit}`} />
     </div>
   );

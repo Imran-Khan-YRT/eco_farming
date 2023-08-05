@@ -9,25 +9,25 @@ import { contact_logo, contact_call, contact_email, contact_facebook, contact_li
 
 const ContactForm = () => {
   return (
-    <Container style="md:border rounded-lg md:m-20 m-10 py-10">
-      <FlexWrapper style=" items-center md:justify-between  md:flex-row flex-col flex-wrap gap-20 m-auto">
-        <FlexWrapper flexDirection="flex-col" style="m-auto">
-          <Section title={"Get in Touch "} description={"We are here for you! How can we help ?"} titleColor="text-secondary" style="pb-8"></Section>
+    <Container className="md:border rounded-lg">
+      <FlexWrapper className=" items-center md:justify-between  md:flex-row flex-col flex-wrap gap-20 m-auto">
+        <FlexWrapper flexDirection="flex-col" className="m-auto">
+          <Section title={"Get in Touch "} description={"We are here for you! How can we help ?"} titleColor="text-secondary" className="pb-8"></Section>
           <MyForm />
         </FlexWrapper>
-        <FlexWrapper flexDirection="flex-col" style="m-auto">
-          <CustomImage src={contact_logo} alt="contact_logo" style="w-full h-300" />
+        <FlexWrapper flexDirection="flex-col" className="m-auto">
+          <CustomImage src={contact_logo} alt="contact_logo" className="w-full h-300" />
           <div>
-            <FlexWrapper style="gap-4 py-2">
-              <CustomImage src={conact_location} alt="location icon" style="w-7 h-7" />
+            <FlexWrapper className="gap-4 py-2">
+              <CustomImage src={conact_location} alt="location icon" className="w-7 h-7" />
               6391 Elgin St. Celina,Delaware
             </FlexWrapper>
-            <FlexWrapper style="gap-4 py-2">
-              <CustomImage src={contact_call} alt="location icon" style="w-7 h-7" />
+            <FlexWrapper className="gap-4 py-2">
+              <CustomImage src={contact_call} alt="location icon" className="w-7 h-7" />
               (406) 555-0120
             </FlexWrapper>
-            <FlexWrapper style="gap-4 py-2">
-              <CustomImage src={contact_email} alt="location icon" style="w-7 h-7" />
+            <FlexWrapper className="gap-4 py-2">
+              <CustomImage src={contact_email} alt="location icon" className="w-7 h-7" />
               contact@gmail.com
             </FlexWrapper>
           </div>

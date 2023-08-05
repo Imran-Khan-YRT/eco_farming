@@ -10,10 +10,10 @@ import CustomButton from "../CommonComponents/CustomButton";
 const ImageGrid = () => {
   return (
     <div className="md:block sm:hidden grid grid-cols-1 gap-1">
-      <CustomImage style="h-[300px] " src={home_image1} alt="Image 1" />
+      <CustomImage className="h-[300px] " src={home_image1} alt="Image 1" />
       <div className="grid grid-cols-2 gap-1">
-        <CustomImage style="h-[200px]" src={home_image2} alt="Image 2" />
-        <CustomImage style="h-[200px]" src={home_image3} alt="Image 3" />
+        <CustomImage className="h-[200px]" src={home_image2} alt="Image 2" />
+        <CustomImage className="h-[200px]" src={home_image3} alt="Image 3" />
       </div>
     </div>
   );
@@ -23,16 +23,16 @@ const OverViewButtons = () => {
   const overViewData = data.home.overview;
   return (
     <>
-      <FlexWrapper style="mt-10 gap-5">
+      <FlexWrapper className="mt-10 gap-5">
         <CustomButton>{overViewData.button.ourProducts}</CustomButton>
-        <CustomButton style="bg-tertiary text-black">{overViewData.button.learnMore}</CustomButton>
+        <CustomButton className="bg-tertiary text-black">{overViewData.button.learnMore}</CustomButton>
       </FlexWrapper>
-      <FlexWrapper style="mt-10 gap-5">
-        <CustomButton style="bg-tertiary text-black">
+      <FlexWrapper className="mt-10 gap-5">
+        <CustomButton className="bg-tertiary text-black">
           <h1>456+</h1>
           {overViewData.button.projectDone}
         </CustomButton>
-        <CustomButton style="bg-tertiary text-black">
+        <CustomButton className="bg-tertiary text-black">
           <h1>156+</h1>
           {overViewData.button.teamMembers}
         </CustomButton>
@@ -49,7 +49,7 @@ const Home = () => {
   const overViewData = data.home.overview;
   return (
     <>
-      <Container style="grid grid-cols-2">
+      <Container className="grid grid-cols-2">
         <div className="justify-self-end px-40 pt-12 max-w-[650px]">
           <Section title={overViewData.title} description={overViewData.content}></Section>
           <OverViewButtons />

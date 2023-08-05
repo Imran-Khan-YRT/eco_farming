@@ -13,28 +13,28 @@ import useResponsive from "../../Utils/useResponsive";
 const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
-    <Container style="px-12 py-4 shadow-md sticky top-0 bg-white">
-      <FlexWrapper style="justify-between">
-        <CustomImage src={app_logo} alt="app_logo" style="w-12 h-12"></CustomImage>
-        <FlexWrapper gap="gap-8" style="items-center">
+    <div className="px-12 py-4 shadow-md sticky top-0 bg-white">
+      <FlexWrapper className="justify-between">
+        <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
+        <FlexWrapper gap="gap-8" className="items-center">
           {headerData.map((menuItem) => (
             <Link to={menuItem.to} key={menuItem.to}>
               {menuItem.text}
             </Link>
           ))}
-          <CustomButton style="py-1">{data.header.button.downloadSignUp}</CustomButton>
+          <CustomButton className="py-1">{data.header.button.downloadSignUp}</CustomButton>
         </FlexWrapper>
       </FlexWrapper>
-    </Container>
+    </div>
   );
 };
 
 const HeaderMobile = () => {
   return (
-    <Container style="mx-10 mb-10 bg-white px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 ">
-      <FlexWrapper style="justify-between items-center">
-        <CustomImage src={app_logo} alt="app_logo" style="w-12 h-12"></CustomImage>
-        <CustomImage src={menuIcon} alt="menu_icon" style="w-6 h-6"></CustomImage>
+    <Container className="px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 ">
+      <FlexWrapper className="justify-between items-center">
+        <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
+        <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
       </FlexWrapper>
     </Container>
   );
