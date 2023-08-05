@@ -80,25 +80,5 @@
                 }
             ]
         }
-    },
-    "features": {
-        "title": "MIMODZI APP FEATURES!",
-        "button": "See how it works",
-        "content": [
-            {
-                "id": 1,
-                "title": "The User Authentication in MIMODZI",
-                "description": "Our User Authentication is a crucial feature that ensures secure access to the app. It allows users to create an account, log in, and manage their personal information securely. By implementing authentication mechanisms such as username/password combinations, biometric authentication, or two-factor authentication, the app ensures that only authorized users can access the app's functionalities",
-                "button": "View User Authentication",
-                "image": "image1"
-            },
-            {
-                "id": 2,
-                "title": "The User Authentication in MIMODZI",
-                "description": "Our User Authentication is a crucial feature that ensures secure access to the app. It allows users to create an account, log in, and manage their personal information securely. By implementing authentication mechanisms such as username/password combinations, biometric authentication, or two-factor authentication, the app ensures that only authorized users can access the app's functionalities",
-                "button": "View User Authentication",
-                "image": "image2"
-            }
-        ]
     }
 }
