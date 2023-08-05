@@ -41,8 +41,8 @@ const HeaderMobile = () => {
 };
 
 const Header = () => {
-  const isMobile = useResponsive();
-  return <>{!isMobile ? <HeaderPc /> : <HeaderMobile />}</>;
+  const { isMobile, isTablet, isPc } = useResponsive();
+  return <>{isPc ? <HeaderPc /> : <HeaderMobile />}</>;
 };
 
 export default Header;

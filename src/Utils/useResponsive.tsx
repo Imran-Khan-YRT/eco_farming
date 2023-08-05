@@ -1,30 +1,32 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 const useResponsive = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleResize = useCallback(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
+  const [responsiveState, setResponsiveState] = useState({
+    isMobile: false,
+    isTablet: false,
+    isPc: false,
+  });
 
   useEffect(() => {
-    // Initial check on component mount
-    handleResize();
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      const isMobile = screenWidth <= 550; // Adjust the breakpoint as needed for mobile devices
+      const isTablet = screenWidth > 550 && screenWidth <= 900; // Adjust the breakpoint as needed for tablet devices
+      const isPc = screenWidth > 900; // Adjust the breakpoint as needed for PC devices
 
-    // Add event listener to recheck on window resize
-    const handleResizeOnResize = () => {
-      handleResize();
+      setResponsiveState({ isMobile, isTablet, isPc });
     };
 
-    window.addEventListener("resize", handleResizeOnResize);
+    handleResize(); // Initial check on component mount
 
-    // Clean up the event listener on component unmount
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener("resize", handleResizeOnResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  return isMobile;
+  return responsiveState;
 };
 
 export default useResponsive;

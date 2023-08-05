@@ -14,12 +14,12 @@ const footerMobileStyle = `flex flex-col pt-3`;
 
 const Footer = () => {
   const footerData = Object.values(data.footer.items);
-  const isMobile = useResponsive();
+  const { isMobile, isTablet, isPc } = useResponsive();
   return (
     <Container backgroundColor="bg-tertiary" margin="m-0" className="m-0">
       <FlexWrapper className="md:flex-row flex-col justify-between">
         <CustomImage src={app_logo} alt="app_logo" className="w-16 h-16"></CustomImage>
-        <div className={!isMobile ? footerPCStyle : footerMobileStyle}>
+        <div className={isPc ? footerPCStyle : footerMobileStyle}>
           {footerData.map((value) => (
             // use Link later
             <a href="" className={`${listText_2} px-4`}>

@@ -5,10 +5,8 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: '440px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      sm: '550px',
+      md: '900px',
     },
     extend: {
       colors: {

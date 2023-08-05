@@ -9,7 +9,7 @@ import CustomButton from "../CommonComponents/CustomButton";
 
 const ImageGrid = () => {
   return (
-    <div className="md:block sm:hidden grid grid-cols-1 gap-1">
+    <div className="md:grid hidden grid-cols-1 gap-1">
       <CustomImage className="h-[300px] " src={home_image1} alt="Image 1" />
       <div className="grid grid-cols-2 gap-1">
         <CustomImage className="h-[200px]" src={home_image2} alt="Image 2" />
