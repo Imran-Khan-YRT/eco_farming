@@ -5,12 +5,13 @@ interface ImageProps {
   style: string;
   src: string;
   alt: string;
+  objectFit?: string;
 }
 
-const CustomImage: React.FC<ImageProps> = ({ src, alt, style = "" }) => {
+const CustomImage: React.FC<ImageProps> = ({ src, alt, objectFit = "object-cover", style = "" }) => {
   return (
     <div className={`${style}`}>
-      <img src={src} alt={alt} className="w-full h-full object-cover rounded-lg" />
+      <img src={src} alt={alt} className={`w-full h-full rounded-lg ${objectFit}`} />
     </div>
   );
 };
