@@ -5,17 +5,17 @@ import Container from "../CommonComponents/Container";
 import MyForm from "./MyForm";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
-import { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedin, conact_location, contact_twitter } from "../../assets";
+import { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedIn, conact_location, contact_twitter } from "../../assets";
 
 const ContactForm = () => {
   return (
-    <Container style="md:border rounded-lg md:m-20 m-10">
-      <FlexWrapper style=" items-center md:justify-between  md:flex-row flex-col flex-wrap gap-20">
-        <div className="p-20">
-          <Section title={"Get in Touch "} description={"We are here for you! How can we help ?"}></Section>
+    <Container style="md:border rounded-lg md:m-20 m-10 py-10">
+      <FlexWrapper style=" items-center md:justify-between  md:flex-row flex-col flex-wrap gap-20 m-auto">
+        <FlexWrapper flexDirection="flex-col" style="m-auto">
+          <Section title={"Get in Touch "} description={"We are here for you! How can we help ?"} titleColor="text-secondary" style="pb-8"></Section>
           <MyForm />
-        </div>
-        <FlexWrapper flexDirection="flex-col" style="pr-20 pt-10">
+        </FlexWrapper>
+        <FlexWrapper flexDirection="flex-col" style="m-auto">
           <CustomImage src={contact_logo} alt="contact_logo" style="w-full h-300" />
           <div>
             <FlexWrapper style="gap-4 py-2">

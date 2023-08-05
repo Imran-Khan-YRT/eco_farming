@@ -13,7 +13,7 @@ import useResponsive from "../../Utils/useResponsive";
 const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
-    <Container style="px-12 py-4 shadow-md">
+    <Container style="px-12 py-4 shadow-md sticky top-0 bg-white">
       <FlexWrapper style="justify-between">
         <CustomImage src={app_logo} alt="app_logo" style="w-12 h-12"></CustomImage>
         <FlexWrapper gap="gap-8" style="items-center">
@@ -31,8 +31,8 @@ const HeaderPc = () => {
 
 const HeaderMobile = () => {
   return (
-    <Container style="m-10 px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 ">
-      <FlexWrapper style="justify-between">
+    <Container style="mx-10 mb-10 bg-white px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 ">
+      <FlexWrapper style="justify-between items-center">
         <CustomImage src={app_logo} alt="app_logo" style="w-12 h-12"></CustomImage>
         <CustomImage src={menuIcon} alt="menu_icon" style="w-6 h-6"></CustomImage>
       </FlexWrapper>

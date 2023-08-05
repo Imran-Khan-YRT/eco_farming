@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CustomButton from "../CommonComponents/CustomButton";
 
-const fieldStyle = "bg-tertiary px-3 py-3 my-2 md:min-w-[400px] min-w-full";
+const fieldStyle = "bg-tertiary px-5 py-3 my-2 md:w-[400px] w-[300px] rounded";
 
 interface FormValues {
   name: string;
@@ -12,9 +12,9 @@ interface FormValues {
 }
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
-  email: Yup.string().email("Invalid email").required("Email is required"),
-  problems: Yup.string().required("Please describe your problems"),
+  name: Yup.string().required(""),
+  email: Yup.string().email("Invalid email").required(""),
+  problems: Yup.string().required(""),
 });
 
 const MyForm: React.FC = () => {
@@ -53,7 +53,7 @@ const MyForm: React.FC = () => {
             <ErrorMessage name="problems" component="div" className="error" />
           </div>
 
-          <CustomButton type="submit" disabled={isSubmitting} style="mt-4">
+          <CustomButton type="submit" disabled={isSubmitting} style="mt-4 md:w-[400px] w-[300px]">
             Submit
           </CustomButton>
         </Form>

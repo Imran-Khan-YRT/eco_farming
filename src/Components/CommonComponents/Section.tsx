@@ -5,12 +5,13 @@ interface sectionProps {
   title: string;
   description: string;
   style?: string;
+  titleColor?: string;
 }
 
-const Section: React.FC<sectionProps> = ({ title, description, style }) => {
+const Section: React.FC<sectionProps> = ({ title, description, style = "", titleColor = "" }) => {
   return (
     <FlexWrapper flexDirection="flex-col" style={`flex-start ${style}`}>
-      <h1 className={sectionTitle}>{title}</h1>
+      <h1 className={`${sectionTitle} ${titleColor}`}>{title}</h1>
       <p className={sectionDescription}>{description}</p>
     </FlexWrapper>
   );
