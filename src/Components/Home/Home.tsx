@@ -9,11 +9,11 @@ import CustomButton from "../CommonComponents/CustomButton";
 
 const ImageGrid = () => {
   return (
-    <div className="grid grid-cols-1 gap-1">
-      <CustomImage style="max-h-[300px] " src={home_image1} alt="Image 1" />
+    <div className="md:block sm:hidden grid grid-cols-1 gap-1">
+      <CustomImage style="h-[300px] " src={home_image1} alt="Image 1" />
       <div className="grid grid-cols-2 gap-1">
-        <CustomImage style="max-h-[200px]" src={home_image2} alt="Image 2" />
-        <CustomImage style="max-h-[200px]" src={home_image3} alt="Image 3" />
+        <CustomImage style="h-[200px]" src={home_image2} alt="Image 2" />
+        <CustomImage style="h-[200px]" src={home_image3} alt="Image 3" />
       </div>
     </div>
   );
@@ -58,8 +58,6 @@ const Home = () => {
           <ImageGrid />
         </div>
       </Container>
-
-      <AppOffers />
     </>
   );
 };

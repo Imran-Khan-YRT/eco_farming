@@ -15,7 +15,7 @@ const Footer = () => {
   const footerData = Object.values(data.footer.items);
   const isMobile = useResponsive();
   return (
-    <Container style="border p-8 pl-12 md:bg-white bg-tertiary">
+    <Container style="border p-8 pl-12 md:bg-white bg-tertiary mt-8">
       <FlexWrapper style="md:flex-row flex-col justify-between items-center">
         <CustomImage src={app_logo} alt="app_logo" style="w-16 h-16"></CustomImage>
         <div className={!isMobile ? footerPCStyle : footerMobileStyle}>

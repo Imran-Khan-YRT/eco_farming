@@ -8,7 +8,7 @@ interface ImageProps {
   objectFit?: string;
 }
 
-const CustomImage: React.FC<ImageProps> = ({ src, alt, objectFit = "object-contain", style = "" }) => {
+const CustomImage: React.FC<ImageProps> = ({ src, alt, objectFit = "object-fill", style = "" }) => {
   return (
     <div className={`${style}`}>
       <img src={src} alt={alt} className={`w-full h-full rounded-lg ${objectFit}`} />
