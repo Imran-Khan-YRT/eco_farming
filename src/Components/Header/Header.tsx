@@ -42,6 +42,7 @@ const HeaderMobile = () => {
 
 const Header = () => {
   const { isMobile, isTablet, isPc } = useResponsive();
+  console.log(isMobile, isTablet, isPc);
   return <>{isPc ? <HeaderPc /> : <HeaderMobile />}</>;
 };
 

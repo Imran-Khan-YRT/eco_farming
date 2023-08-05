@@ -6,36 +6,29 @@ import { home_image1, home_image2, home_image3 } from "../../assets";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
-
-const ImageGrid = () => {
-  return (
-    <div className="md:grid hidden grid-cols-1 gap-1">
-      <CustomImage className="h-[300px] " src={home_image1} alt="Image 1" />
-      <div className="grid grid-cols-2 gap-1">
-        <CustomImage className="h-[200px]" src={home_image2} alt="Image 2" />
-        <CustomImage className="h-[200px]" src={home_image3} alt="Image 3" />
-      </div>
-    </div>
-  );
-};
+import useResponsive from "../../Utils/useResponsive";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
   return (
     <>
-      <FlexWrapper className="mt-10 gap-5">
-        <CustomButton>{overViewData.button.ourProducts}</CustomButton>
-        <CustomButton className="bg-tertiary text-black">{overViewData.button.learnMore}</CustomButton>
-      </FlexWrapper>
-      <FlexWrapper className="mt-10 gap-5">
-        <CustomButton className="bg-tertiary text-black">
-          <h1>456+</h1>
-          {overViewData.button.projectDone}
-        </CustomButton>
-        <CustomButton className="bg-tertiary text-black">
-          <h1>156+</h1>
-          {overViewData.button.teamMembers}
-        </CustomButton>
+      <FlexWrapper flexDirection="flex-col" justifyContent="flex-start" className="grid-cols-2 pt-10" gap="gap-2">
+        <FlexWrapper className="mb-2 " justifyContent="flex-start" gap="gap-4">
+          <CustomButton>{overViewData.button.ourProducts}</CustomButton>
+          <CustomButton backgroundColor="bg-tertiary" textColor="text-black">
+            {overViewData.button.learnMore}
+          </CustomButton>
+        </FlexWrapper>
+        <FlexWrapper justifyContent="flex-start" gap="gap-4">
+          <CustomButton backgroundColor="bg-tertiary" textColor="text-black">
+            <div className="font-bold">456+</div>
+            {overViewData.button.projectDone}
+          </CustomButton>
+          <CustomButton backgroundColor="bg-tertiary" textColor="text-black">
+            <h1 className="font-bold">156+</h1>
+            {overViewData.button.teamMembers}
+          </CustomButton>
+        </FlexWrapper>
       </FlexWrapper>
     </>
   );
@@ -45,11 +38,40 @@ const AppOffers = () => {
   return <div>test</div>;
 };
 
+const ImageGrid = () => {
+  return (
+    <div className="grid-cols-1 w-[600px]">
+      <CustomImage className="pb-1" src={home_image1} alt="Image 1" />
+      <div className="grid grid-cols-2 ">
+        <CustomImage className=" pr-1" src={home_image2} alt="Image 2" />
+        <CustomImage className="" src={home_image3} alt="Image 3" objectFit="" />
+      </div>
+    </div>
+  );
+};
+
+const OverviewPc = () => {
+  const { isPc, isMobile, isTablet } = useResponsive();
+  const overViewData = data.home.overview;
+  return (
+    <Container margin="md:mr-0 m-auto md:pt-0 p-auto md:pl-20 pb-20">
+      <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
+        <FlexWrapper flexDirection="flex-col" justifyContent="md:flex-start">
+          <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]"></Section>
+          <OverViewButtons />
+        </FlexWrapper>
+        {isPc && <ImageGrid />}
+      </FlexWrapper>
+    </Container>
+  );
+};
+
 const Home = () => {
   const overViewData = data.home.overview;
   return (
     <>
-      <Container className="grid grid-cols-2">
+      <OverviewPc />
+      {/* <Container className="grid grid-cols-2">
         <div className="justify-self-end px-40 pt-12 max-w-[650px]">
           <Section title={overViewData.title} description={overViewData.content}></Section>
           <OverViewButtons />
@@ -57,7 +79,7 @@ const Home = () => {
         <div className="justify-self-end">
           <ImageGrid />
         </div>
-      </Container>
+      </Container> */}
     </>
   );
 };
