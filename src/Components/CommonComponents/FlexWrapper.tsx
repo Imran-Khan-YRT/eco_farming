@@ -8,7 +8,7 @@ interface FlexProps {
 }
 
 const FlexWrapper: React.FC<FlexProps> = ({ children, flexDirection = "", gap = "", className = "" }) => {
-  return <div className={`flex  ${flexDirection} ${gap} ${className}`}>{children}</div>;
+  return <div className={`flex items-center ${flexDirection} ${gap} ${className}`}>{children}</div>;
 };
 
 export default FlexWrapper;

@@ -3,11 +3,12 @@ import { ReactNode } from "react";
 interface ContainerProps {
   children: ReactNode;
   backgroundColor?: string;
+  margin?: string;
   className?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children, backgroundColor = "bg-white", className = "" }) => {
-  return <div className={`md:m-20 m-10 py-10 ${backgroundColor} ${className}`}>{children}</div>;
+const Container: React.FC<ContainerProps> = ({ children, margin = "md:m-20 m-10", backgroundColor = "bg-white", className = "" }) => {
+  return <div className={`p-10 ${backgroundColor} ${margin} ${className}`}>{children}</div>;
 };
 
 export default Container;
