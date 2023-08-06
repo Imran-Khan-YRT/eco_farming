@@ -7,7 +7,7 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import useResponsive from "../../Utils/useResponsive";
-import ZigZag from "../ZigZag/ZigZag";
+import ZigZag from "../CommonComponents/ZigZag";
 import { getArrayFromObj } from "../../Utils/util";
 import { captionText, listText_1, listText_2, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 

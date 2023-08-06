@@ -1,9 +1,9 @@
 import React from "react";
-import Section from "../CommonComponents/Section";
-import CustomButton from "../CommonComponents/CustomButton";
-import FlexWrapper from "../CommonComponents/FlexWrapper";
-import CustomImage from "../CommonComponents/CustomImage";
-import Container from "../CommonComponents/Container";
+import Section from "./Section";
+import CustomButton from "./CustomButton";
+import FlexWrapper from "./FlexWrapper";
+import CustomImage from "./CustomImage";
+import Container from "./Container";
 interface ZigZagProps {
   title: string;
   id?: number;
