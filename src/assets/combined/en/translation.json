@@ -56,6 +56,28 @@
                 "buttonText": "Explore More",
                 "image": ""
             }
+        ],
+        "sellingPoints": [
+            {
+                "id": 1,
+                "title": "Pest Control Service",
+                "description": "when you use our platform, you can be assured that the produce you receive will be fresh and of the highest quality"
+            },
+            {
+                "id": 2,
+                "title": "Pest Control Service",
+                "description": "when you use our platform, you can be assured that the produce you receive will be fresh and of the highest quality"
+            },
+            {
+                "id": 3,
+                "title": "Pest Control Service",
+                "description": "when you use our platform, you can be assured that the produce you receive will be fresh and of the highest quality"
+            },
+            {
+                "id": 4,
+                "title": "Pest Control Service",
+                "description": "when you use our platform, you can be assured that the produce you receive will be fresh and of the highest quality"
+            }
         ]
     },
     "footer": {

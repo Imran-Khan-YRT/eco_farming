@@ -14,7 +14,7 @@ import Carousel from "./Carousel";
 const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
-    <Container margin="m-0" className="px-12 py-4 shadow-md sticky top-0" backgroundColor="bg-white">
+    <Container margin="m-0" className="px-12 py-4 shadow-md sticky top-0 z-1000" backgroundColor="bg-white">
       <FlexWrapper className="justify-between">
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
         <FlexWrapper gap="gap-8" className="items-center">

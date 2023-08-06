@@ -4,6 +4,9 @@ import home_image2 from "./Home/image2.png";
 import home_image3 from "./Home/image3.png";
 import menuIcon from "./Home/menu.svg";
 import home_iphone from "./Home/home_iphone.png";
+import sellingAnt from "./Home/sellingAnt.png";
+import home_women from "./Home/home_women.png";
+import home_sell_field from "./Home/home_sell_field.png";
 
 // contact page
 import contact_logo from "./contact/contact_logo.png";
@@ -32,7 +35,7 @@ import image2 from "./features/image2.png";
 export const footerIcons = [footer_facebook, footer_instagram, footer_linkedIn, footer_twitter, footer_youtube];
 export const footerButtons = [footer_app_store, footer_google_play];
 
-export { app_logo, home_image1, home_image2, home_image3, menuIcon, home_iphone };
+export { app_logo, home_image1, home_image2, home_image3, menuIcon, home_iphone, sellingAnt, home_sell_field, home_women };
 export { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedIn, conact_location, contact_twitter };
 
 export { feature_iphone13, feature_playIcon, image1, image2 };
