@@ -11,8 +11,8 @@ const useResponsive = () => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       const isMobile = screenWidth <= 550; // Adjust the breakpoint as needed for mobile devices
-      const isTablet = screenWidth > 550 && screenWidth <= 900; // Adjust the breakpoint as needed for tablet devices
-      const isPc = screenWidth > 900; // Adjust the breakpoint as needed for PC devices
+      const isTablet = screenWidth > 550 && screenWidth <= 1000; // Adjust the breakpoint as needed for tablet devices
+      const isPc = screenWidth > 1000; // Adjust the breakpoint as needed for PC devices
 
       setResponsiveState({ isMobile, isTablet, isPc });
     };

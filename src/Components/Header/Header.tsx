@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../CommonComponents/Container";
 import app_logo from "../../assets/app_logo.png";
-import { menuIcon } from "../../assets";
+import { image1, menuIcon } from "../../assets";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import data from "../../assets/combined/en/translation.json";
 import { Link } from "react-router-dom";
@@ -31,12 +31,15 @@ const HeaderPc = () => {
 
 const HeaderMobile = () => {
   return (
-    <Container className="px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 ">
-      <FlexWrapper className="justify-between items-center">
-        <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
-        <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
-      </FlexWrapper>
-    </Container>
+    <div className="relative h-[500px]">
+      <CustomImage src={image1} alt="image_1" className=" w-full h-full absolute" objectFit="cover" />
+      <Container className="px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 mt-0">
+        <FlexWrapper className="justify-between items-center">
+          <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
+          <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
+        </FlexWrapper>
+      </Container>
+    </div>
   );
 };
 
@@ -47,3 +50,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// {!isPc && <CustomImage src={home_image1} alt="home_image1" className="top-0" />}

@@ -50,38 +50,27 @@ const ImageGrid = () => {
   );
 };
 
-const OverviewPc = () => {
-  const { isPc, isMobile, isTablet } = useResponsive();
-  const overViewData = data.home.overview;
-  return (
-    <Container margin="md:mr-0 m-auto md:pt-0 p-auto md:pl-20 pb-20">
-      <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
-        <FlexWrapper flexDirection="flex-col" justifyContent="md:flex-start">
-          <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]"></Section>
-          <OverViewButtons />
-        </FlexWrapper>
-        {isPc && <ImageGrid />}
-      </FlexWrapper>
-    </Container>
-  );
-};
-
 const Home = () => {
   const overViewData = data.home.overview;
-  return (
-    <>
-      <OverviewPc />
-      {/* <Container className="grid grid-cols-2">
-        <div className="justify-self-end px-40 pt-12 max-w-[650px]">
-          <Section title={overViewData.title} description={overViewData.content}></Section>
-          <OverViewButtons />
-        </div>
-        <div className="justify-self-end">
-          <ImageGrid />
-        </div>
-      </Container> */}
-    </>
-  );
+  const { isPc, isMobile, isTablet } = useResponsive();
+
+  const OverviewPc = () => {
+    return (
+      <>
+        <Container margin="md:mr-0  md:p-0 p-auto md:pl-20 pb-20">
+          <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
+            <FlexWrapper flexDirection="flex-col" justifyContent="md:flex-start">
+              <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]"></Section>
+              <OverViewButtons />
+            </FlexWrapper>
+            {isPc && <ImageGrid />}
+          </FlexWrapper>
+        </Container>
+      </>
+    );
+  };
+
+  return <OverviewPc />;
 };
 
 export default Home;
