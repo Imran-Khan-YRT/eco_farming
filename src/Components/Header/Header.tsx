@@ -9,6 +9,7 @@ import { getArrayFromObj } from "../../Utils/util";
 import CustomButton from "../CommonComponents/CustomButton";
 import CustomImage from "../CommonComponents/CustomImage";
 import useResponsive from "../../Utils/useResponsive";
+import Carousel from "./Carousel";
 
 const HeaderPc = () => {
   const headerData = data.header.menu;
@@ -32,8 +33,8 @@ const HeaderPc = () => {
 const HeaderMobile = () => {
   return (
     <div className="relative h-[500px]">
-      <CustomImage src={image1} alt="image_1" className=" w-full h-full absolute" objectFit="cover" />
-      <Container className="px-4 py-2 border rounded-xl shadow-md sticky top-10 z-1000 mt-0">
+      <Carousel />
+      <Container className="px-8 py-2 border rounded-xl shadow-md sticky top-10 z-1000 mt-0">
         <FlexWrapper className="justify-between items-center">
           <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
           <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
