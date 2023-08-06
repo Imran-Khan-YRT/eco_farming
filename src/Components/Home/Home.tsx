@@ -2,14 +2,14 @@ import React from "react";
 import Container from "../CommonComponents/Container";
 import Section from "../CommonComponents/Section";
 import data from "../../assets/combined/en/translation.json";
-import { home_image1, home_image2, home_image3, home_iphone, sellingAnt, home_sell_field, home_women } from "../../assets";
+import { home_image1, home_image2, home_image3, home_iphone, sellingAnt, home_sell_field, home_women, handIcon } from "../../assets";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import useResponsive from "../../Utils/useResponsive";
 import ZigZag from "../ZigZag/ZigZag";
 import { getArrayFromObj } from "../../Utils/util";
-import { listText_1, listText_2, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import { captionText, listText_1, listText_2, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
@@ -104,6 +104,7 @@ const SellingPoints = () => {
 };
 
 const SustainableSolution = () => {
+  // separate shadowedImage if further required
   interface shadowedImageProps {
     src: string;
     shadowPosition?: string;
@@ -127,7 +128,27 @@ const SustainableSolution = () => {
         </FlexWrapper>
         <FlexWrapper flexDirection="flex-col" className="max-w-[350px]">
           <Section title={"Sustainable Farm Solutionfor a Better Tomorrow"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"} />
+          <FlexWrapper className="flex-wrap gap-2">
+            {Array(4)
+              .fill(5)
+              .map((_) => (
+                <>
+                  <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
+                  <div className={listText_3}> 100% Satisfaction</div>
+                </>
+              ))}
+          </FlexWrapper>
         </FlexWrapper>
+      </FlexWrapper>
+    </Container>
+  );
+};
+
+const Feedback = () => {
+  return (
+    <Container>
+      <FlexWrapper justifyContent="justify-center" className="items-center">
+        <Section title="Best Feedback From Happy Clients" description="We take pride in providing our customers with the highest quality, sustainable agriculture solutions. " titleStyle={pageTitle} />
       </FlexWrapper>
     </Container>
   );
@@ -140,6 +161,7 @@ const Home = () => {
       <AppOffers />
       <SellingPoints />
       <SustainableSolution />
+      <Feedback />
     </>
   );
 };
