@@ -8,6 +8,7 @@ import CustomButton from "../CommonComponents/CustomButton";
 import { pageTitle } from "../../Utils/customStyles";
 import Section from "../CommonComponents/Section";
 import { image1, image2 } from "../../assets";
+import ZigZag from "../CommonComponents/ZigZag";
 
 const CardContent = () => {
   return (
@@ -27,22 +28,13 @@ const CardContent = () => {
 };
 
 const AppFeatures = () => {
+  const featuresData = data.features;
   return (
     <Container>
-      {/* <FlexWrapper style="justify-between items-center">
-        <CustomImage src={feature_iphone13} alt="iphone13" style="" />
-        <FlexWrapper flexDirection="flex-col">
-          <h1 className={`${pageTitle} max-w-[250px]`}>{data.features.title}</h1>
-          <CustomButton>
-            <FlexWrapper>
-              <CustomImage src={feature_playIcon} alt="icon" style=""></CustomImage>
-              {data.features.button}
-            </FlexWrapper>
-          </CustomButton>
-        </FlexWrapper>
-      </FlexWrapper> */}
-      <CardContent />
-      test
+      <ZigZag id={1} title={featuresData.title} description={""} buttonText={featuresData.button} image={feature_iphone13} />
+      {featuresData.content.map((value) => (
+        <ZigZag id={value.id} title={value.title} description={value.description} buttonText={value.button} image={image1} />
+      ))}
     </Container>
   );
 };

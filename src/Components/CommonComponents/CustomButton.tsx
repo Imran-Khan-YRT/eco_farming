@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const CustomButton: React.FC<ButtonProps> = ({ children, type = "button", backgroundColor = "bg-primary hover:bg-secondary", textColor = "text-white", disabled = false, className = "" }) => {
   return (
-    <button type={type} disabled={disabled} className={`rounded-md py-2 px-4 shadow-lg font-light ${textColor} ${backgroundColor} ${className}`}>
+    <button type={type} disabled={disabled} className={`rounded-md py-2 px-4 shadow-xl font-light ${textColor} ${backgroundColor} ${className}`}>
       {children}
     </button>
   );
