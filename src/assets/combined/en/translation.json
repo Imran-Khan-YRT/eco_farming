@@ -33,7 +33,30 @@
                 "projectDone": "Project Done",
                 "teamMembers": "Team Members"
             }
-        }
+        },
+        "appOffers": [
+            {
+                "id": 1,
+                "title": "AI-Driven Crop Recommendations",
+                "description": "Based on the soil health, weather conditions, and other data, the AI can recommend the best suitable crops to grow for optimal yield.",
+                "buttonText": "Explore More",
+                "image": ""
+            },
+            {
+                "id": 2,
+                "title": "Microfinance Marketplace",
+                "description": "This is a platform where users can apply for agricultural loans. The app can have a feature to fill a form for loan application. The AI could suggest the best loan options available based on the farmer's financial situation, farming needs, and potential return on investment.",
+                "buttonText": "Explore More",
+                "image": ""
+            },
+            {
+                "id": 3,
+                "title": "Microfinance Marketplace",
+                "description": "This is a platform where users can apply for agricultural loans. The app can have a feature to fill a form for loan application. The AI could suggest the best loan options available based on the farmer's financial situation, farming needs, and potential return on investment.",
+                "buttonText": "Explore More",
+                "image": ""
+            }
+        ]
     },
     "footer": {
         "items": {

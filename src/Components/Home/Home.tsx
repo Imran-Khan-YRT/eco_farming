@@ -2,11 +2,14 @@ import React from "react";
 import Container from "../CommonComponents/Container";
 import Section from "../CommonComponents/Section";
 import data from "../../assets/combined/en/translation.json";
-import { home_image1, home_image2, home_image3 } from "../../assets";
+import { home_image1, home_image2, home_image3, home_iphone } from "../../assets";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import useResponsive from "../../Utils/useResponsive";
+import ZigZag from "../ZigZag/ZigZag";
+import { getArrayFromObj } from "../../Utils/util";
+import { pageTitle } from "../../Utils/customStyles";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
@@ -35,7 +38,18 @@ const OverViewButtons = () => {
 };
 
 const AppOffers = () => {
-  return <div>test</div>;
+  const appOffersData = data.home.appOffers;
+  console.log(appOffersData);
+  return (
+    <Container margin="mx-0 mt-20" backgroundColor="bg-tertiary" className="">
+      <FlexWrapper flexDirection="flex-col">
+        <Section title="What The App Offers" description={""} titleStyle={pageTitle} />
+        {appOffersData.map((value) => (
+          <ZigZag id={value.id} title={value.title} description={value.description} buttonText={value.buttonText} image={home_iphone} />
+        ))}
+      </FlexWrapper>
+    </Container>
+  );
 };
 
 const ImageGrid = () => {
@@ -60,7 +74,7 @@ const Home = () => {
         <Container margin="md:mr-0  md:p-0 p-auto md:pl-20 pb-20">
           <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
             <FlexWrapper flexDirection="flex-col" justifyContent="md:flex-start">
-              <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]"></Section>
+              <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]" titleStyle={pageTitle}></Section>
               <OverViewButtons />
             </FlexWrapper>
             {isPc && <ImageGrid />}
@@ -70,7 +84,12 @@ const Home = () => {
     );
   };
 
-  return <OverviewPc />;
+  return (
+    <>
+      <OverviewPc />;
+      <AppOffers />
+    </>
+  );
 };
 
 export default Home;

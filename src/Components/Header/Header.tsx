@@ -14,7 +14,7 @@ import Carousel from "./Carousel";
 const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
-    <Container margin="m-0" className="px-12 py-4 shadow-md sticky top-0">
+    <Container margin="m-0" className="px-12 py-4 shadow-md sticky top-0" backgroundColor="bg-white">
       <FlexWrapper className="justify-between">
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
         <FlexWrapper gap="gap-8" className="items-center">
@@ -34,7 +34,7 @@ const HeaderMobile = () => {
   return (
     <div className="relative h-[500px]">
       <Carousel />
-      <Container className="px-8 py-2 border rounded-xl shadow-md sticky top-10 z-1000 mt-0">
+      <Container className="px-8 py-2 border rounded-xl shadow-md sticky top-10 z-1000 mt-0" backgroundColor="bg-white">
         <FlexWrapper className="justify-between items-center">
           <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
           <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>

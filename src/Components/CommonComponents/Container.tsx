@@ -7,7 +7,7 @@ interface ContainerProps {
   className?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children, margin = "md:m-20 m-10", backgroundColor = "bg-white", className = "" }) => {
+const Container: React.FC<ContainerProps> = ({ children, margin = "md:m-20 m-10  mb-20", backgroundColor = "inherit", className = "" }) => {
   return <div className={`p-10 ${backgroundColor} ${margin} ${className}`}>{children}</div>;
 };
 
