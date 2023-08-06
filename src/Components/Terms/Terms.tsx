@@ -5,7 +5,7 @@ import { listText_3 } from "../../Utils/customStyles";
 const Terms = () => {
   return (
     <Container className="border rounded-lg h-[400px] overflow-scroll">
-      <ol className={`list-decimal space-y-4 ${listText_3}`}>
+      <ol className={`m-10 list-decimal space-y-4 ${listText_3}`}>
         <li>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate nemo nesciunt quibusdam et magnam, totam, nisi, hic labore ipsa dolores voluptates harum! Placeat quam, sequi ipsa amet
           tempore incidunt.

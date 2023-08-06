@@ -34,7 +34,7 @@ const HeaderMobile = () => {
   return (
     <div className="relative h-[500px]">
       <Carousel />
-      <Container className="px-8 py-2 border rounded-xl shadow-md sticky top-10 z-1000 mt-0" backgroundColor="bg-white">
+      <Container className="px-8 py-2 border rounded-xl shadow-md fixed top-10 z-1000 mt-0 w-[85%]" backgroundColor="bg-white">
         <FlexWrapper className="justify-between items-center">
           <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
           <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>

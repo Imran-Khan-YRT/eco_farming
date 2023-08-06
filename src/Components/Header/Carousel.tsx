@@ -13,7 +13,7 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="absolute w-full h-full">
+    <div className="absolute w-full">
       <CustomImage className="w-full h-[350px]" src={images[currentImage]} alt={`Image ${currentImage + 1}`} objectFit="cover" />
 
       <FlexWrapper justifyContent="justify-center" className="mt-6 gap-1">
