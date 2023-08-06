@@ -5,10 +5,11 @@ interface ContainerProps {
   backgroundColor?: string;
   margin?: string;
   className?: string;
+  padding?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children, margin = "md:m-20 m-10  mb-20", backgroundColor = "inherit", className = "" }) => {
-  return <div className={`p-10 ${backgroundColor} ${margin} ${className}`}>{children}</div>;
+const Container: React.FC<ContainerProps> = ({ children, margin = "md:m-20 m-10  mb-20", padding = "p-10", backgroundColor = "inherit", className = "" }) => {
+  return <div className={`${padding} ${backgroundColor} ${margin} ${className}`}>{children}</div>;
 };
 
 export default Container;
