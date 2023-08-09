@@ -12,14 +12,14 @@ interface ContainerProps {
 
 const getMargin = (margined: boolean, type: "card" | "component") => {
   let margin = margined ? "m-20  sm:m-10 m-8 " : "m-0 ";
-  let marginBottom = type === "component" ? "mb-12" : "mb-8";
+  let marginBottom = type === "component" ? "md:mb-8 mb-4" : "md:mb-4 mb-2";
   margin += marginBottom;
   return margin;
 };
 
 // work left for padding
 const getPadding = (paddinged: boolean, type: "card" | "component") => {
-  let padding = type === "card" ? "md:p-12 p-8" : "md:p-20 p-12";
+  let padding = type === "card" ? "md:p-8 p-4" : "md:p-12 p-8";
   padding = !paddinged ? "p-0" : padding;
   return padding;
 };

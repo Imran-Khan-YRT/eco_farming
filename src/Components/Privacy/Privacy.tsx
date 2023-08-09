@@ -6,7 +6,8 @@ const Privacy = () => {
   return (
     <>
       <div className={`${sectionTitle} mx-28 mt-10`}>Terms & Conditions</div>
-      <Container padding="p-20 pt-5" className={`border rounded-lg h-[600px] overflow-scroll ${listText_3}`}>
+      {/* // fix it */}
+      <Container /*padding="p-20 pt-5"*/ className={`border rounded-lg h-[600px] overflow-scroll ${listText_3}`}>
         <p className="pb-10">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus vero nemo sit amet, earum, officiis beatae rerum veniam illum pariatur doloremque eveniet maxime illo minus sunt animi placeat
           atque aperiam harum labore laboriosam, adipisci ea. Magnam sit itaque repellendus ipsum explicabo aliquam et corrupti, perferendis illo voluptatem fugiat nihil laboriosam beatae accusamus

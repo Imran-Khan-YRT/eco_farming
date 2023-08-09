@@ -41,7 +41,7 @@ const AppOffers = () => {
   const appOffersData = data.home.appOffers;
   console.log(appOffersData);
   return (
-    <Container margin="mx-0 mt-20" backgroundColor="bg-tertiary" className="">
+    <Container margined={false} backgroundColor="bg-tertiary">
       <FlexWrapper flexDirection="flex-col">
         <Section title="What The App Offers" description={""} titleStyle={pageTitle} />
         {appOffersData.map((value) => (
@@ -69,7 +69,7 @@ const OverviewPc = () => {
   const { isPc, isMobile, isTablet } = useResponsive();
   return (
     <>
-      <Container margin="md:mr-0  md:p-0 p-auto md:pl-20 pb-20">
+      <Container margined={false} paddinged={false}>
         <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
           <FlexWrapper flexDirection="flex-col" justifyContent="md:flex-start">
             <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]" titleStyle={pageTitle}></Section>
