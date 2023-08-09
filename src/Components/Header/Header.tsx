@@ -14,16 +14,17 @@ import Carousel from "./Carousel";
 const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
-    <Container margin="m-0" className="px-12 py-4 shadow-md sticky top-0 z-1000" backgroundColor="bg-white">
+    <Container margined={false} type="card" className="md:py-4 mb-0 shadow-md sticky top-0 z-1000">
+      {/*less y-padding margin bottom 0 for  sticky header */}
       <FlexWrapper className="justify-between">
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
-        <FlexWrapper gap="gap-8" className="items-center">
+        <FlexWrapper gap="gap-8">
           {headerData.map((menuItem) => (
             <Link to={menuItem.to} key={menuItem.to}>
               {menuItem.text}
             </Link>
           ))}
-          <CustomButton className="py-1">{data.header.button.downloadSignUp}</CustomButton>
+          <CustomButton>{data.header.button.downloadSignUp}</CustomButton>
         </FlexWrapper>
       </FlexWrapper>
     </Container>
@@ -32,15 +33,14 @@ const HeaderPc = () => {
 
 const HeaderMobile = () => {
   return (
-    <div className="relative h-[500px]">
+    <Container margined={false} paddinged={false} className="relative h-[500px]">
       <Carousel />
-      <Container className="px-8 py-2 border rounded-xl shadow-md fixed top-10 z-1000 mt-0 w-[85%]" backgroundColor="bg-white">
-        <FlexWrapper className="justify-between items-center">
-          <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
-          <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
-        </FlexWrapper>
-      </Container>
-    </div>
+      <FlexWrapper className="fixed left-8 top-8 right-12   z-1000 border bg-white rounded-xl shadow-sm shadow-[#CDE7C9]  justify-between px-4 py-2">
+        {/* md doesnt get priority because of samll screen + working fine but not happy*/}
+        <CustomImage src={app_logo} alt="app_logo" className="w-10 h-10"></CustomImage>
+        <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
+      </FlexWrapper>
+    </Container>
   );
 };
 
@@ -51,5 +51,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// {!isPc && <CustomImage src={home_image1} alt="home_image1" className="top-0" />}
