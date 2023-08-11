@@ -1,0 +1,43 @@
+/* Styles for the feedback section */
+.feedback-section {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f7f7f7;
+}
+
+.feedback-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.feedback-info {
+  flex: 1;
+}
+
+.feedback-rating {
+  width: 50px;
+  text-align: center;
+}
+
+/* Styles for navigation buttons */
+.feedback-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.feedback-navigation button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.feedback-navigation button:hover {
+  background-color: #0056b3;
+}

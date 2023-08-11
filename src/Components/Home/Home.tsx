@@ -10,6 +10,7 @@ import useResponsive from "../../Utils/useResponsive";
 import ZigZag from "../CommonComponents/ZigZag";
 import { getArrayFromObj } from "../../Utils/util";
 import { captionText, listText_1, listText_2, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import FeedbackComponent from "./Feedback";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
@@ -144,12 +145,37 @@ const SustainableSolution = () => {
   );
 };
 
-const Feedback = () => {
+interface FeedbackProps {
+  feedback: Feedback[];
+}
+
+interface Feedback {
+  name: string;
+  comment: string;
+  rating: number;
+}
+
+const feedbackData: Feedback[] = [
+  {
+    name: "Client A",
+    comment: "Excellent service! Highly recommended.",
+    rating: 5,
+  },
+  {
+    name: "Client B",
+    comment: "Good experience overall.",
+    rating: 4,
+  },
+  // Add more feedback items as needed
+];
+
+const Feedbacks = () => {
   return (
     <Container>
       <FlexWrapper justifyContent="justify-center" className="items-center">
         <Section title="Best Feedback From Happy Clients" description="We take pride in providing our customers with the highest quality, sustainable agriculture solutions. " titleStyle={pageTitle} />
       </FlexWrapper>
+      <FeedbackComponent feedback={feedbackData} />
     </Container>
   );
 };
@@ -161,7 +187,7 @@ const Home = () => {
       <AppOffers />
       <SellingPoints />
       <SustainableSolution />
-      <Feedback />
+      <Feedbacks />
     </>
   );
 };
