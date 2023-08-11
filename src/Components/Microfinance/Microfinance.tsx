@@ -26,6 +26,7 @@ const Microfinance = () => {
       <Container className=" w-full !mx-auto !p-20">
         <Section title={data.microfinance.title} description={<MicrofinanceWorkList />}></Section>
       </Container>
+      <Section title={data.microfinance.apply_for_loan.title} description={""}></Section>
       <Container margined={true} backgroundColor="bg-tertiary" className="!mx-auto !p-20">
         <CustomizedSteppers />
       </Container>

@@ -12,7 +12,7 @@ interface ContainerProps {
 
 const getMargin = (margined: boolean, type: "card" | "component") => {
   if (!margined) return "m-0";
-  let margin = type === "component" ? "md:m-20 m-10 md:mb-8 mb-4" : "m-10 mb-4";
+  let margin = type === "component" ? "md:m-20 m-10 md:mb-8 mb-4 mt-0" : "m-10 mb-4 mt-0";
 
   return margin;
 };
@@ -29,7 +29,6 @@ const Container: React.FC<ContainerProps> = ({ children, margined = true, paddin
   let margin = getMargin(margined, type);
   let padding = getPadding(paddinged, type);
   let border = isBordered ? "border" : "";
-
   return <div className={`${padding} ${backgroundColor} ${margin} ${border} ${className}`}>{children}</div>;
 };
 
