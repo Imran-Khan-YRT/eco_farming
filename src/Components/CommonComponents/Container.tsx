@@ -11,9 +11,9 @@ interface ContainerProps {
 }
 
 const getMargin = (margined: boolean, type: "card" | "component") => {
-  let margin = margined ? "m-20  sm:m-10 m-8 " : "m-0 ";
-  let marginBottom = type === "component" ? "md:mb-8 mb-4" : "md:mb-4 mb-2";
-  margin += marginBottom;
+  if (!margined) return "m-0";
+  let margin = type === "component" ? "md:m-20 m-10 md:mb-8 mb-4" : "m-10 mb-4";
+
   return margin;
 };
 
