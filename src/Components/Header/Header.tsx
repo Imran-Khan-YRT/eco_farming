@@ -1,15 +1,14 @@
 import React from "react";
 import Container from "../CommonComponents/Container";
 import app_logo from "../../assets/app_logo.png";
-import { image1, menuIcon } from "../../assets";
+import { menuIcon } from "../../assets";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import data from "../../assets/combined/en/translation.json";
 import { Link } from "react-router-dom";
-import { getArrayFromObj } from "../../Utils/util";
 import CustomButton from "../CommonComponents/CustomButton";
 import CustomImage from "../CommonComponents/CustomImage";
-import useResponsive from "../../Utils/useResponsive";
 import Carousel from "./Carousel";
+import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 
 const HeaderPc = () => {
   const headerData = data.header.menu;
@@ -45,8 +44,8 @@ const HeaderMobile = () => {
 };
 
 const Header = () => {
-  const { isMobile, isTablet, isPc } = useResponsive();
-  console.log(isMobile, isTablet, isPc);
+  const { isPc } = useResponsiveContext();
+  // console.log(isMobile, isTablet, isPc);
   return <>{isPc ? <HeaderPc /> : <HeaderMobile />}</>;
 };
 

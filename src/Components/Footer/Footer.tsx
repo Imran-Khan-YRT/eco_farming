@@ -4,17 +4,17 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import { app_logo } from "../../assets";
 import data from "../../assets/combined/en/translation.json";
-import { getArrayFromObj } from "../../Utils/util";
-import useResponsive from "../../Utils/useResponsive";
+
 import { footerIcons, footerButtons } from "../../assets";
 
 import { listText_2, captionText } from "../../Utils/customStyles";
+import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 const footerPCStyle = `grid grid-cols-3`;
 const footerMobileStyle = `flex flex-col pt-3`;
 
 const Footer = () => {
   const footerData = Object.values(data.footer.items);
-  const { isMobile, isTablet, isPc } = useResponsive();
+  const { isPc } = useResponsiveContext();
   return (
     <Container backgroundColor="bg-tertiary" margined={false}>
       <FlexWrapper className="md:flex-row flex-col justify-between">
@@ -22,7 +22,7 @@ const Footer = () => {
         <div className={isPc ? footerPCStyle : footerMobileStyle}>
           {footerData.map((value) => (
             // use Link later
-            <a href="" className={`${listText_2} px-4`}>
+            <a key={value} href={value} className={`${listText_2} px-4`}>
               {value}
             </a>
           ))}

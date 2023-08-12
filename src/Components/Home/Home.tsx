@@ -6,11 +6,10 @@ import { home_image1, home_image2, home_image3, home_iphone, sellingAnt, home_se
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
-import useResponsive from "../../Utils/useResponsive";
 import ZigZag from "../CommonComponents/ZigZag";
-import { getArrayFromObj } from "../../Utils/util";
-import { captionText, listText_1, listText_2, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import { listText_1, listText_3, pageTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
+import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
@@ -66,7 +65,7 @@ const ImageGrid = () => {
 
 const OverviewPc = () => {
   const overViewData = data.home.overview;
-  const { isPc, isMobile, isTablet } = useResponsive();
+  const { isPc } = useResponsiveContext();
   return (
     <>
       <Container margined={false} paddinged={false}>
@@ -113,7 +112,7 @@ const SustainableSolution = () => {
     return (
       <>
         <div className="relative">
-          <img src={src} alt="Image with Top Half Shadow" />
+          <img src={src} alt="Top Half Shadow" />
           <div className={`absolute w-2/3 h-2/3 rounded-xl bg-[#C3FFC3]  -z-20 ${shadowPosition}`}></div>
         </div>
       </>
@@ -143,10 +142,6 @@ const SustainableSolution = () => {
     </Container>
   );
 };
-
-interface FeedbackProps {
-  feedback: Feedback[];
-}
 
 interface Feedback {
   name: string;

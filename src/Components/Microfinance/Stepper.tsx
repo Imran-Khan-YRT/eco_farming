@@ -4,7 +4,7 @@ import Container from "../CommonComponents/Container";
 import { listText_2, listText_3 } from "../../Utils/customStyles";
 import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
-import useResponsive from "../../Utils/useResponsive";
+import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 interface ContentProps {
   data?: string;
   index?: number;
@@ -84,7 +84,7 @@ const StepperMobile = () => {
 };
 
 const CustomizedSteppers = () => {
-  const { isPc, isMobile, isTablet } = useResponsive();
+  const { isPc } = useResponsiveContext();
   return <>{isPc ? <StepperPC /> : <StepperMobile />}</>;
 };
 
