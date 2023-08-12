@@ -10,21 +10,26 @@ const useResponsive = () => {
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
-      const isMobile = screenWidth <= 550; // Adjust the breakpoint as needed for mobile devices
-      const isTablet = screenWidth > 550 && screenWidth <= 1000; // Adjust the breakpoint as needed for tablet devices
-      const isPc = screenWidth > 1000; // Adjust the breakpoint as needed for PC devices
+      const newIsMobile = screenWidth <= 550;
+      const newIsTablet = screenWidth > 550 && screenWidth <= 1000;
+      const newIsPc = screenWidth > 1000;
 
-      setResponsiveState({ isMobile, isTablet, isPc });
+      if (newIsMobile !== responsiveState.isMobile || newIsTablet !== responsiveState.isTablet || newIsPc !== responsiveState.isPc) {
+        setResponsiveState({
+          isMobile: newIsMobile,
+          isTablet: newIsTablet,
+          isPc: newIsPc,
+        });
+      }
     };
 
     handleResize(); // Initial check on component mount
-
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [responsiveState]);
 
   return responsiveState;
 };
