@@ -40,7 +40,6 @@ const OverViewButtons = () => {
 
 const AppOffers = () => {
   const appOffersData = data.home.appOffers;
-  console.log(appOffersData);
   return (
     <Container margined={false} backgroundColor="bg-tertiary">
       <FlexWrapper flexDirection="flex-col">
