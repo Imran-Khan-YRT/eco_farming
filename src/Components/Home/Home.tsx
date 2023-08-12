@@ -112,8 +112,8 @@ const SustainableSolution = () => {
     return (
       <>
         <div className="relative">
-          <img src={src} alt="Top Half Shadow" />
-          <div className={`absolute w-2/3 h-2/3 rounded-xl bg-[#C3FFC3]  -z-20 ${shadowPosition}`}></div>
+          <img src={src} alt="Top Half Shadow" className="relative w-full z-20" />
+          <div className={`absolute w-2/3 h-2/3 rounded-xl bg-[#C3FFC3] ${shadowPosition}`}></div>
         </div>
       </>
     );
