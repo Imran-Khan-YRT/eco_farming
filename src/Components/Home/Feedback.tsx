@@ -31,12 +31,12 @@ const FeedbackComponent: React.FC<FeedbackProps> = ({ feedback }) => {
 
   const FeedbackCard = () => {
     return (
-      <Container>
-        <FlexWrapper>
+      <Container margined={false} paddinged={false} className="h-screen">
+        <FlexWrapper className="pt-20 justify-center">
           <img className={"w-6 h-6 cursor-pointer"} src={left_arrow} alt={"left_arrow"} onClick={handlePrevClick} />
-          <Container type="card" className="w-[70%] h-[250px] rounded relative" backgroundColor="bg-[#F2FFF6]">
-            <CustomImage className={"absolute -top-10  left-1/2 w-20 h-20 rounded-full  z-20"} src={person} alt={"person"} objectFit="contain" />
-            <FlexWrapper flexDirection="flex-col">
+          <Container type="card" className="w-[70%]  rounded relative" backgroundColor="bg-[#F2FFF6]">
+            <img className={"absolute -top-12 left-[40%] md:w-20 sm:w-16 w-12  md:h-20 sm:h-16 h-12 rounded-full  z-20"} src={person} alt={"person"} />
+            <FlexWrapper flexDirection="flex-col pt-4">
               <div className={`${listText_3}`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt eni Lorem ipsum dolor sit amet, consectetur ad{" "}
               </div>
