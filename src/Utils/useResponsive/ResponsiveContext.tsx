@@ -1,5 +1,5 @@
 import React, { createContext, useContext, ReactNode } from "react";
-import useResponsive from "../useResponsive";
+import useResponsive from "./useResponsive";
 
 interface ResponsiveState {
   isMobile: boolean;
