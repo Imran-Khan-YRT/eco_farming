@@ -34,8 +34,8 @@ const FeedbackComponent: React.FC<FeedbackProps> = ({ feedback }) => {
       <Container margined={false} paddinged={false} className="h-screen">
         <FlexWrapper className="pt-20 justify-center">
           <img className={"w-6 h-6 cursor-pointer"} src={left_arrow} alt={"left_arrow"} onClick={handlePrevClick} />
-          <Container type="card" className="w-[70%]  rounded relative" backgroundColor="bg-[#F2FFF6]">
-            <img className={"absolute -top-12 left-[40%] md:w-20 sm:w-16 w-12  md:h-20 sm:h-16 h-12 rounded-full  z-20"} src={person} alt={"person"} />
+          <Container type="card" className="md:w-[40%] w-[70%] rounded relative" backgroundColor="bg-[#F2FFF6]">
+            <img className={"absolute sm:-top-12  -top-5 sm:left-[40%] left-[30%] md:w-20 sm:w-16 w-12  md:h-20 sm:h-16 h-12 rounded-full  z-20"} src={person} alt={"person"} />
             <FlexWrapper flexDirection="flex-col pt-4">
               <div className={`${listText_3}`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt eni Lorem ipsum dolor sit amet, consectetur ad{" "}

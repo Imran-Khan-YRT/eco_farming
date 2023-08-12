@@ -11,11 +11,12 @@ interface ZigZagProps {
   buttonText?: string;
   image?: string;
   className?: string;
+  backgroundColor?: string;
 }
 
-const ZigZag: React.FC<ZigZagProps> = ({ id = 0, title = "", description = "", buttonText = "", image = "", className }) => {
+const ZigZag: React.FC<ZigZagProps> = ({ id = 0, title = "", description = "", buttonText = "", image = "", backgroundColor = "bg-tertiary", className }) => {
   return (
-    <Container margined={true} type="card" className="w-full" backgroundColor="bg-tertiary">
+    <Container margined={true} type="card" className="w-full" backgroundColor={backgroundColor}>
       <FlexWrapper className={`${id % 2 === 0 ? "flex-row-reverse" : "flex-row"}  justify-center items-center md:gap-20  flex-wrap`}>
         <CustomImage src={image} alt={`image-${id}`} className="md:w-[400px] w-[350px] h-[400px]" />
         <FlexWrapper flexDirection="flex-col" className="w-[400px] gap-4 sm:items-start items-center" justifyContent="justify-center">
