@@ -13,7 +13,7 @@ import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContex
 const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
-    <Container margined={false} type="card" className="md:py-4 mb-0 shadow-md sticky top-0 z-1000">
+    <Container margined={false} type="card" className="md:py-4 mb-0 shadow-md sticky top-0 z-50">
       {/*less y-padding margin bottom 0 for  sticky header */}
       <FlexWrapper className="justify-between">
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
@@ -34,7 +34,7 @@ const HeaderMobile = () => {
   return (
     <Container margined={false} paddinged={false} className="relative h-[500px] w-full">
       <Carousel />
-      <Container className="fixed top-10 w-[80%] z-2000 border bg-white rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-2">
+      <Container className="fixed top-10 w-[80%]  z-50 border bg-white rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-2">
         <FlexWrapper className="justify-between">
           {/* md doesnt get priority because of samll screen + working fine but not happy*/}
           <CustomImage src={app_logo} alt="app_logo" className="w-10 h-10"></CustomImage>
