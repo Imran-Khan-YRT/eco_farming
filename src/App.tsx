@@ -7,11 +7,11 @@ import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <>
+    <div className="w-full">
       <Header />
       <GetRoutes />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -177,7 +177,7 @@ const Feedbacks = () => {
 const Home = () => {
   return (
     <>
-      <OverviewPc />;
+      <OverviewPc />
       <AppOffers />
       <SellingPoints />
       <SustainableSolution />
