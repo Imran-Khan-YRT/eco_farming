@@ -125,16 +125,27 @@ const SustainableSolution = () => {
           <ShadowedImage src={home_women} />
           <ShadowedImage src={home_sell_field} shadowPosition="-left-2 -bottom-2" />
         </FlexWrapper>
-        <FlexWrapper flexDirection="flex-col" className="max-w-[350px]">
+        <FlexWrapper flexDirection="flex-col" className="max-w-[350px] items-start">
           <Section title={"Sustainable Farm Solutionfor a Better Tomorrow"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"} />
-          <FlexWrapper className="flex-wrap gap-2">
-            {Array(4)
+          {/* change with real data use grid later */}
+          <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
+            {Array(2)
               .fill(5)
               .map((_) => (
-                <>
+                <FlexWrapper>
                   <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
                   <div className={listText_3}> 100% Satisfaction</div>
-                </>
+                </FlexWrapper>
+              ))}
+          </FlexWrapper>
+          <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
+            {Array(2)
+              .fill(5)
+              .map((_) => (
+                <FlexWrapper>
+                  <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
+                  <div className={listText_3}> 100% Satisfaction</div>
+                </FlexWrapper>
               ))}
           </FlexWrapper>
         </FlexWrapper>
