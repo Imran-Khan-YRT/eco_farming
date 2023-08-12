@@ -7,7 +7,7 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import ZigZag from "../CommonComponents/ZigZag";
-import { listText_1, listText_3, pageTitle } from "../../Utils/customStyles";
+import { listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 
@@ -42,7 +42,7 @@ const AppOffers = () => {
   return (
     <Container margined={false} backgroundColor="bg-tertiary">
       <FlexWrapper flexDirection="flex-col">
-        <Section title="What The App Offers" description={""} titleStyle={pageTitle} />
+        <Section title="What The App Offers" description={""} titleStyle={sectionTitle} />
         {appOffersData.map((value) => (
           <ZigZag id={value.id} title={value.title} description={value.description} buttonText={value.buttonText} image={home_iphone} />
         ))}
@@ -70,7 +70,7 @@ const OverviewPc = () => {
     <>
       <Container margined={false} paddinged={false}>
         <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
-          <FlexWrapper flexDirection="flex-col" justifyContent="md:flex-start">
+          <FlexWrapper flexDirection="flex-col" justifyContent="" className="pl-4">
             <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]" titleStyle={pageTitle}></Section>
             <OverViewButtons />
           </FlexWrapper>
