@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CustomButton from "../CommonComponents/CustomButton";
 
-const fieldStyle = "bg-tertiary px-5 py-3 my-2 md:w-[400px] w-[300px] rounded";
+const fieldStyle = "sm:w-[25rem] w-[16rem] bg-tertiary pl-4 py-2 my-2 rounded border-none transition-colors";
 
 interface FormValues {
   name: string;
@@ -34,26 +34,26 @@ const MyForm: React.FC = () => {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {({ isSubmitting }) => (
-        <Form>
-          <div>
-            <Field type="text" name="name" id="name" className={fieldStyle} placeholder="Enter Your Name" />
+      {({ isSubmitting, isValid }) => (
+        // by default flex-col for form
+        <Form className=" font-[300]">
+          {/* add label or show error ErrorMessage using validation */}
+          <div className="w-full">
+            <Field type="text" name="name" id="name" placeholder="Enter Your Name" className={fieldStyle} />
             <ErrorMessage name="name" component="div" className="error" />
           </div>
 
           <div>
-            {/* <label htmlFor="email">Email:</label> */}
             <Field type="email" name="email" id="email" className={fieldStyle} placeholder="Enter your email Address" />
             <ErrorMessage name="email" component="div" className="error" />
           </div>
 
           <div>
-            {/* <label htmlFor="problems">Problems:</label> */}
             <Field as="textarea" name="problems" id="problems" rows={4} className={fieldStyle} placeholder="Define Your Problem" />
             <ErrorMessage name="problems" component="div" className="error" />
           </div>
 
-          <CustomButton type="submit" disabled={isSubmitting} className="mt-4 md:w-[400px] w-[300px]">
+          <CustomButton type="submit" disabled={isSubmitting || !isValid} className="mt-4 w-full font-bold">
             Submit
           </CustomButton>
         </Form>

@@ -11,8 +11,8 @@ const useResponsive = () => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       const newIsMobile = screenWidth <= 550;
-      const newIsTablet = screenWidth > 550 && screenWidth <= 1000;
-      const newIsPc = screenWidth > 1000;
+      const newIsTablet = screenWidth > 550 && screenWidth <= 767;
+      const newIsPc = screenWidth > 767;
 
       if (newIsMobile !== responsiveState.isMobile || newIsTablet !== responsiveState.isTablet || newIsPc !== responsiveState.isPc) {
         setResponsiveState({

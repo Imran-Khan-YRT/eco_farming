@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     screens: {
       sm: '550px',
-      md: '1000px',
+      md: '767px',
+      lg: '1025px'
     },
     extend: {
       colors: {
@@ -16,6 +17,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
 

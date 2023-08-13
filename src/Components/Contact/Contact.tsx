@@ -7,11 +7,12 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedIn, conact_location, contact_twitter, sideContact } from "../../assets";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
+import { customText_1, pageTitle } from "../../Utils/customStyles";
 
 const ContactForm = () => {
   const { isPc } = useResponsiveContext();
   return (
-    <Container className="md:border rounded-lg relative">
+    <Container className="border rounded-lg relative">
       {isPc && (
         <>
           <img src={sideContact} alt="sidebar" className=" w-10 h-32 absolute bottom-2 -right-10 " />
@@ -21,12 +22,19 @@ const ContactForm = () => {
         </>
       )}
 
-      <FlexWrapper className=" items-center md:justify-between  md:flex-row flex-col flex-wrap gap-20 m-auto">
-        <FlexWrapper flexDirection="flex-col" className="m-auto">
-          <Section title={"Get in Touch "} description={"We are here for you! How can we help ?"} titleColor="text-secondary" className="pb-8"></Section>
+      <FlexWrapper className="lg:justify-between justify-center flex-wrap gap-20 w-full !p-auto">
+        <FlexWrapper flexDirection="flex-col" className="!items-start">
+          <Section
+            title={"Get in Touch "}
+            description={"We are here for you! How can we help ?"}
+            titleColor="text-secondary"
+            className="pb-8"
+            titleStyle={pageTitle}
+            descriptionStyle={customText_1}
+          ></Section>
           <MyForm />
         </FlexWrapper>
-        <FlexWrapper flexDirection="flex-col" className="m-auto">
+        <FlexWrapper flexDirection="flex-col" className="">
           <CustomImage src={contact_logo} alt="contact_logo" className="w-full h-300" />
           <div>
             <FlexWrapper className="gap-4 py-2">

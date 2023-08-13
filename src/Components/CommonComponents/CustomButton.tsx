@@ -3,15 +3,22 @@ import { ReactNode } from "react";
 interface ButtonProps {
   children: ReactNode;
   className?: string;
+  disabled?: boolean;
   backgroundColor?: string;
   textColor?: string;
   type?: "button" | "submit" | "reset" | undefined;
-  disabled?: boolean;
 }
 
-const CustomButton: React.FC<ButtonProps> = ({ children, type = "button", backgroundColor = "bg-primary hover:bg-secondary", textColor = "text-white", disabled = false, className = "" }) => {
+const CustomButton: React.FC<ButtonProps> = ({
+  children,
+  type = "button",
+  disabled = false,
+  textColor = "text-white",
+  backgroundColor = !disabled ? "bg-primary hover:bg-secondary" : "bg-[#E6E6E6]",
+  className = "",
+}) => {
   return (
-    <button type={type} disabled={disabled} className={`rounded-md py-2 px-4 shadow-xl font-light ${textColor} ${backgroundColor} ${className}`}>
+    <button type={type} disabled={disabled} className={`rounded-md py-2 px-4 shadow-xl font-[500] ${textColor} ${backgroundColor} ${className}`}>
       {children}
     </button>
   );
