@@ -14,7 +14,7 @@ const ContactForm = () => {
   const { isPc } = useResponsiveContext();
   return (
     <SkewedBacground>
-      <Container className="border rounded-lg relative top-2">
+      <Container className="md:border rounded-lg relative top-2">
         {isPc && (
           <>
             <img src={sideContact} alt="sidebar" className=" w-10 h-32 absolute bottom-2 -right-10 " />
