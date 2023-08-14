@@ -9,22 +9,22 @@ import { footerIcons, footerButtons } from "../../assets";
 
 import { listText_2, captionText } from "../../Utils/customStyles";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
+import { Link } from "react-router-dom";
 const footerPCStyle = `grid grid-cols-3`;
 const footerMobileStyle = `flex flex-col pt-3`;
 
 const Footer = () => {
-  const footerData = Object.values(data.footer.items);
+  const footerData = data.footer.items;
   const { isPc } = useResponsiveContext();
   return (
     <Container backgroundColor="bg-tertiary" margined={false}>
       <FlexWrapper className="md:flex-row flex-col justify-between">
         <CustomImage src={app_logo} alt="app_logo" className="w-16 h-16"></CustomImage>
         <div className={isPc ? footerPCStyle : footerMobileStyle}>
-          {footerData.map((value) => (
-            // use Link later
-            <a key={value} href={value} className={`${listText_2} px-4`}>
-              {value}
-            </a>
+          {footerData.map((footerItem) => (
+            <Link to={footerItem.to} key={footerItem.to} className={`${listText_2} px-4`}>
+              {footerItem.text}
+            </Link>
           ))}
         </div>
       </FlexWrapper>

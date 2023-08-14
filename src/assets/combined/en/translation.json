@@ -81,16 +81,36 @@
         ]
     },
     "footer": {
-        "items": {
-            "downloadIOSApp": "Download IOS APP",
-            "downloadAndriodApp": "Download Android App",
-            "exploreAppFeatures": "Explore App Features",
-            "blog&news": "Blog & News",
-            "help": "Help and Support",
-            "contactUs": "Contact us",
-            "terms&Condition": "Terms & Condition",
-            "privacy": "Privacy and Policy"
-        }
+        "items": [
+            {
+                "to": "appOverview",
+                "text": "Download IOS APP"
+            },
+            {
+                "to": "appOverview",
+                "text": "Download Android App"
+            },
+            {
+                "to": "features",
+                "text": "Explore App Features"
+            },
+            {
+                "to": "help",
+                "text": "Help and Support"
+            },
+            {
+                "to": "contact",
+                "text": "Contact us"
+            },
+            {
+                "to": "terms",
+                "text": "Terms & Condition"
+            },
+            {
+                "to": "privacy",
+                "text": "Privacy and Policy"
+            }
+        ]
     },
     "microfinance": {
         "title": "Microfinance market place works",
