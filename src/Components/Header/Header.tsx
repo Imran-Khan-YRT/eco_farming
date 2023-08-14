@@ -37,22 +37,44 @@ const HeaderPc = () => {
 const HeaderMobile = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerData = data.header.menu;
+  const toggleMenu = () => {
+    console.log(isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
+    closeMenu();
   };
   const height = activeLink === "home" ? "h-[500px]" : "";
   return (
     <Container margined={false} paddinged={false} className={`relative w-full ${height}`}>
       {activeLink === "home" && <Carousel />}
-      <Container className="fixed top-8 w-[80%]  z-50 border bg-white rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-2">
+      <Container className="fixed top-8 w-[80%]  z-50 border  rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-1">
         <FlexWrapper className="justify-between">
           {/* md doesnt get priority because of samll screen + working fine but not happy*/}
           <CustomImage src={app_logo} alt="app_logo" className="w-10 h-10"></CustomImage>
-          <div>
+          <div onClick={toggleMenu}>
             <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>
           </div>
         </FlexWrapper>
       </Container>
+      {isMenuOpen && (
+        <Container className="w-[80%] fixed  top-24 z-50 border  rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-2" backgroundColor=" bg-tertiary">
+          <FlexWrapper flexDirection="flex-col" gap="gap-4" className="py-4">
+            {headerData.map((menuItem) => (
+              <Link to={menuItem.to} key={menuItem.to} onClick={() => handleLinkClick(menuItem.to)}>
+                {menuItem.text}
+              </Link>
+            ))}
+            <CustomButton>{data.header.button.downloadSignUp}</CustomButton>
+          </FlexWrapper>
+        </Container>
+      )}
     </Container>
   );
 };
