@@ -11,6 +11,7 @@ import handIcon from "./Home/handIcon.png";
 import left_arrow from "./Home/left_arrow.png";
 import right_arrow from "./Home/right_arrow.png";
 import person from "./Home/person.png";
+import background from "./background.png";
 
 // contact page
 import contact_logo from "./contact/contact_logo.png";
@@ -41,7 +42,7 @@ import sideContact from "./sideContact.png";
 export const footerIcons = [footer_facebook, footer_instagram, footer_linkedIn, footer_twitter, footer_youtube];
 export const footerButtons = [footer_app_store, footer_google_play];
 
-export { app_logo, home_image1, home_image2, home_image3, menuIcon, home_iphone, sellingAnt, home_sell_field, home_women, handIcon, left_arrow, right_arrow, person };
+export { app_logo, home_image1, home_image2, home_image3, menuIcon, home_iphone, sellingAnt, home_sell_field, home_women, handIcon, left_arrow, right_arrow, person, background };
 export { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedIn, conact_location, contact_twitter, sideContact };
 
 export { feature_iphone13, feature_playIcon, image1, image2 };
