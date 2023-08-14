@@ -1,53 +1,23 @@
 import React from "react";
 import Container from "../CommonComponents/Container";
-import { listText_3 } from "../../Utils/customStyles";
+import { customText_2, listText_3, sectionTitle } from "../../Utils/customStyles";
+import SkewedBacground from "../CommonComponents/SkewedBackground";
+import data from "../../assets/combined/en/translation.json";
+import { getArrayFromObj } from "../../Utils/util";
 
 const Terms = () => {
+  const termsData = getArrayFromObj(data.terms.itemsList);
   return (
-    <Container className="border rounded-lg h-[400px] overflow-scroll">
-      <ol className={`m-10 list-decimal space-y-4 ${listText_3}`}>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate nemo nesciunt quibusdam et magnam, totam, nisi, hic labore ipsa dolores voluptates harum! Placeat quam, sequi ipsa amet
-          tempore incidunt.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit nihil accusamus id repellat nemo, doloribus ducimus odit sequi minima commodi laudantium quibusdam numquam voluptates
-          eius, quia quae quo deserunt ad voluptatum quidem, recusandae earum voluptate laboriosam! Alias eligendi consequatur numquam explicabo asperiores dolore, magni illo officiis at quo beatae!
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate nemo nesciunt quibusdam et magnam, totam, nisi, hic labore ipsa dolores voluptates harum! Placeat quam, sequi ipsa amet
-          tempore incidunt.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit nihil accusamus id repellat nemo, doloribus ducimus odit sequi minima commodi laudantium quibusdam numquam voluptates
-          eius, quia quae quo deserunt ad voluptatum quidem, recusandae earum voluptate laboriosam! Alias eligendi consequatur numquam explicabo asperiores dolore, magni illo officiis at quo beatae!
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate nemo nesciunt quibusdam et magnam, totam, nisi, hic labore ipsa dolores voluptates harum! Placeat quam, sequi ipsa amet
-          tempore incidunt.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit nihil accusamus id repellat nemo, doloribus ducimus odit sequi minima commodi laudantium quibusdam numquam voluptates
-          eius, quia quae quo deserunt ad voluptatum quidem, recusandae earum voluptate laboriosam! Alias eligendi consequatur numquam explicabo asperiores dolore, magni illo officiis at quo beatae!
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate nemo nesciunt quibusdam et magnam, totam, nisi, hic labore ipsa dolores voluptates harum! Placeat quam, sequi ipsa amet
-          tempore incidunt.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit nihil accusamus id repellat nemo, doloribus ducimus odit sequi minima commodi laudantium quibusdam numquam voluptates
-          eius, quia quae quo deserunt ad voluptatum quidem, recusandae earum voluptate laboriosam! Alias eligendi consequatur numquam explicabo asperiores dolore, magni illo officiis at quo beatae!
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate nemo nesciunt quibusdam et magnam, totam, nisi, hic labore ipsa dolores voluptates harum! Placeat quam, sequi ipsa amet
-          tempore incidunt.
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis velit nihil accusamus id repellat nemo, doloribus ducimus odit sequi minima commodi laudantium quibusdam numquam voluptates
-          eius, quia quae quo deserunt ad voluptatum quidem, recusandae earum voluptate laboriosam! Alias eligendi consequatur numquam explicabo asperiores dolore, magni illo officiis at quo beatae!
-        </li>
-      </ol>
-    </Container>
+    <SkewedBacground>
+      <div className={`relative ${sectionTitle} md:pl-24 pl-12 text-left  pt-14 m-auto`}>{data.terms.title}</div>
+      <Container className={`relative border rounded-lg max-h-[600px] overflow-scroll shadow-md !mt-4 ${customText_2} `}>
+        <ol className={`list-decimal space-y-4 pl-6`}>
+          {termsData.map((item) => (
+            <li key={item.key}>{item.value}</li>
+          ))}
+        </ol>
+      </Container>
+    </SkewedBacground>
   );
 };
 
