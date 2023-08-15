@@ -13,7 +13,12 @@ import { Link } from "react-router-dom";
 const footerPCStyle = `grid grid-cols-3`;
 const footerMobileStyle = `flex flex-col pt-3`;
 
-const Footer = () => {
+interface ChildProps {
+  activeLink: string;
+  setActiveLink: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Footer: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
   const footerData = data.footer.items;
   const { isPc } = useResponsiveContext();
   return (
@@ -22,7 +27,7 @@ const Footer = () => {
         <CustomImage src={app_logo} alt="app_logo" className="w-16 h-16"></CustomImage>
         <div className={isPc ? footerPCStyle : footerMobileStyle}>
           {footerData.map((footerItem) => (
-            <Link to={footerItem.to} key={footerItem.to} className={`${listText_2} px-4`}>
+            <Link to={footerItem.to} key={footerItem.to} className={`${listText_2} px-4`} onClick={() => setActiveLink(footerItem.to)}>
               {footerItem.text}
             </Link>
           ))}

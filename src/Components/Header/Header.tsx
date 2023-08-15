@@ -10,8 +10,12 @@ import CustomImage from "../CommonComponents/CustomImage";
 import Carousel from "./Carousel";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 
-const HeaderPc = () => {
-  const [activeLink, setActiveLink] = useState("home");
+interface ChildProps {
+  activeLink: string;
+  setActiveLink: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const HeaderPc: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
   };
@@ -34,8 +38,7 @@ const HeaderPc = () => {
   );
 };
 
-const HeaderMobile = () => {
-  const [activeLink, setActiveLink] = useState("home");
+const HeaderMobile: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerData = data.header.menu;
   const toggleMenu = () => {
@@ -79,10 +82,10 @@ const HeaderMobile = () => {
   );
 };
 
-const Header = () => {
+const Header: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
   const { isPc } = useResponsiveContext();
   // console.log(isMobile, isTablet, isPc);
-  return <>{isPc ? <HeaderPc /> : <HeaderMobile />}</>;
+  return <>{isPc ? <HeaderPc activeLink={activeLink} setActiveLink={setActiveLink} /> : <HeaderMobile activeLink={activeLink} setActiveLink={setActiveLink} />}</>;
 };
 
 export default Header;

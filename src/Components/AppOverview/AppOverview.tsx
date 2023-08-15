@@ -3,6 +3,7 @@ import ZigZag from "../CommonComponents/ZigZag";
 import { mobile1, mobile3 } from "../../assets";
 import { footerButtons } from "../../assets";
 import Container from "../CommonComponents/Container";
+import { sectionTitle } from "../../Utils/customStyles";
 
 const AppOverview = () => {
   return (
