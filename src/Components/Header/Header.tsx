@@ -7,7 +7,7 @@ import data from "../../assets/combined/en/translation.json";
 import { Link } from "react-router-dom";
 import CustomButton from "../CommonComponents/CustomButton";
 import CustomImage from "../CommonComponents/CustomImage";
-import Carousel from "./Carousel";
+import Carousel from "../Home/Carousel";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 
 interface ChildProps {
@@ -53,10 +53,8 @@ const HeaderMobile: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
     setActiveLink(link);
     closeMenu();
   };
-  const height = activeLink === "home" ? "h-[500px]" : "";
   return (
-    <Container margined={false} paddinged={false} className={`relative w-full ${height}`}>
-      {activeLink === "home" && <Carousel />}
+    <Container margined={false} paddinged={false} className={`relative w-full`}>
       <Container className="fixed top-8 w-[80%]  z-50 border  rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-1">
         <FlexWrapper className="justify-between">
           {/* md doesnt get priority because of samll screen + working fine but not happy*/}

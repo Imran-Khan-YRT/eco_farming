@@ -10,6 +10,7 @@ import ZigZag from "../CommonComponents/ZigZag";
 import { listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
+import Carousel from "./Carousel";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
@@ -186,8 +187,10 @@ const Feedbacks = () => {
 };
 
 const Home = () => {
+  const { isPc } = useResponsiveContext();
   return (
     <>
+      {!isPc && <Carousel />}
       <OverviewPc />
       <AppOffers />
       <SellingPoints />
