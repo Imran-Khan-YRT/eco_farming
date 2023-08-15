@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../CommonComponents/Container";
 import { customText_2, sectionTitle } from "../../Utils/customStyles";
-import SkewedBacground from "../CommonComponents/SkewedBackground";
+import SkewedBacground from "../CommonComponents/SkewedBackground/SkewedBackground";
 import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
 

@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
-import { background } from "../../assets";
 import "./Skewed.css";
-import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
+import { useResponsiveContext } from "../../../Utils/useResponsive/ResponsiveContext";
 interface SkewedBacgroundProps {
   children?: ReactNode;
   backgroundColor?: string;
