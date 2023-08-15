@@ -10,6 +10,7 @@ import Terms from "../../Components/Terms/Terms";
 import Privacy from "../../Components/Privacy/Privacy";
 import Microfinance from "../../Components/Microfinance/Microfinance";
 import AppOverview from "../../Components/AppOverview/AppOverview";
+import Help from "../../Components/Help/Help";
 // import AppFeatures from "../components/AppFeatures/AppFeatures";
 // import ContactUs from "../components/ContactUs/ContactUs";
 // import Microfinance from "../components/Microfinace/Microfinance";
@@ -26,6 +27,7 @@ const GetRoutes: React.FC = () => {
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/microfinance" element={<Microfinance />} />
       <Route path="/appOverview" element={<AppOverview />} />
+      <Route path="/help" element={<Help />} />
     </Routes>
   );
 };

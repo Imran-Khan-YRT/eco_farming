@@ -1,5 +1,5 @@
 export const pageTitle = "lg:text-[2.8rem] md:text-[2.7rem] text-[2.5rem] font-poppins font-semibold my-4";
-export const sectionTitle = "lg:text-[2.5rem] md:text-[2.3rem] text-[2.1rem] font-poppins  font-semibold py-4";
+export const sectionTitle = "lg:text-[2.5rem] md:text-[2.3rem] text-[2.1rem] font-poppins  font-semibold py-4 pb-8";
 export const sectionDescription = "text-md font-poppins font-light mb-2";
 export const smallText = "md:text-[14px] sm:[text-12px] text-[10px] font-light my-1 ";
 export const captionText = "md:text-[12px] sm:[text-11px] text-[10px] font-light my-1 ";

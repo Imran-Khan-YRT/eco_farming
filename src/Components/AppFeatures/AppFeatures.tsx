@@ -30,7 +30,7 @@ import ZigZag from "../CommonComponents/ZigZag";
 const AppFeatures = () => {
   const featuresData = data.features;
   return (
-    <Container paddinged={false}>
+    <Container paddinged={false} margined={false}>
       <ZigZag id={1} title={featuresData.title} description={""} buttonText={featuresData.button} image={feature_iphone13} backgroundColor="bg-white" />
       {featuresData.content.map((value) => (
         <ZigZag id={value.id} title={value.title} description={value.description} buttonText={value.button} image={image1} backgroundColor="bg-white" />

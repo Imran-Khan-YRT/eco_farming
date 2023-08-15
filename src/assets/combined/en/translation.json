@@ -215,5 +215,64 @@
             "4": "Crop Recommendations: Any crop recommendations or advice provided on the Crop Website are based on general principles and should not replace professional agronomic expertise. Use your discretion and consult local agricultural experts for site-specific recommendations.",
             "5": "Crop Inputs and Products: Any mention or recommendation of crop inputs, products, or suppliers on the Crop Website does not constitute an endorsement or guarantee of their quality, efficacy, or"
         }
+    },
+    "help": {
+        "title": "How to download the app",
+        "steps": {
+            "1": "First download the MIMODZI app through Google Store and Apple Store.",
+            "2": "Create your account on MIMODZI app to explore and avail all features.",
+            "3": "Select the service you want to buy.",
+            "4": "If you need any help use help and support."
+        },
+        "troublesooting": {
+            "title": "Troubleshooting Tips",
+            "steps": [
+                {
+                    "title": "What are the best crops to grow in Affrica?",
+                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "title": "How can I improve soil fertility on my farm?",
+                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "title": "What are the steps for starting a small-scale farm?",
+                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "title": "How do I access financial support or loans for agricultural purposes?",
+                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "title": "How can I maximize crop yield and optimize irrigation practices?",
+                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "title": "What are the best preservation methods for harvested crops?",
+                    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                }
+            ]
+        },
+        "frequentlyAsked": {
+            "title": "Frequently Asked Questions",
+            "questions": {
+                "1": "How can 'MIMODZI' enhance crop management?",
+                "2": "What resource utilization optimization features does 'MIMODZI' offer?",
+                "3": "Does 'MIMODZI' help in combating pests and diseases?",
+                "4": "How does the real-time weather update feature work?"
+            }
+        },
+        "popularQurstions": {
+            "title": "How can we help you?",
+            "search": "Write a question or problem",
+            "questions": {
+                "1": "What are the best crops to grow in my region?",
+                "2": "Is 'MIMODZI' available for all types of farming?",
+                "3": "What are personalized alerts in 'MIMODZI'?",
+                "4": "How can I get access to the 'MIMODZI' app",
+                "5": "How can I get access to the 'MIMODZI' app",
+                "6": "Is the 'MIMODZI' app available in multiple languages?"
+            }
+        }
     }
 }
