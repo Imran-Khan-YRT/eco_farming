@@ -27,8 +27,8 @@ const Microfinance = () => {
       <Container margined={false} className=" w-full lg:mx-20 md:mx-16 sm:mx-8">
         <Section title={data.microfinance.title} description={<MicrofinanceWorkList />} titleStyle={`${customText_0} mb-4`} descriptionStyle="pl-4"></Section>
       </Container>
-      <Section title={data.microfinance.apply_for_loan.title} description={""} titleStyle={`${customText_0} md:mx-24 mx-10 `}></Section>
-      <Container margined={false} backgroundColor="bg-tertiary" className="!mx-auto">
+      <Section title={data.microfinance.apply_for_loan.title} description={""} titleStyle={`${customText_0} md:mx-28 mx-10 `}></Section>
+      <Container margined={true} paddinged={true} backgroundColor="bg-tertiary" className="w-[90%] !mt-4">
         <CustomizedSteppers />
       </Container>
     </>

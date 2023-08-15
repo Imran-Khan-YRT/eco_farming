@@ -1,7 +1,7 @@
 import React from "react";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import Container from "../CommonComponents/Container";
-import { listText_2, listText_3 } from "../../Utils/customStyles";
+import { customText_0, customText_3, customText_2, listText_2, listText_3 } from "../../Utils/customStyles";
 import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
@@ -16,41 +16,41 @@ const StepperPC: React.FC<ContentProps> = () => {
   console.log(microdataFirstRow);
   return (
     // Lots of calculation - very poor code
-    <div className=" w-[57rem] relative m-auto h-screen">
+    <div className="max-w-[57rem] relative m-auto h-screen overflow-hidden">
       {/* first line H */}
-      <div className="absolute w-full h-[3px] top-[1rem] bg-primary m-auto"></div>
-      <FlexWrapper justifyContent="justify-around">
+      <div className="absolute w-full h-[3px] top-[1rem] left-[8rem] bg-primary m-auto"></div>
+      <FlexWrapper justifyContent="justify-between" className="px-8">
         {microdataFirstRow.map((item, index) => (
           <FlexWrapper flexDirection="flex-col">
-            <FlexWrapper className="relative">
-              <div className="w-8 h-8 flex justify-center items-center rounded-full bg-primary text-white p-auto z-10">{index + 1}</div>
+            <div className="w-8 h-8 flex justify-center items-center rounded-full bg-primary text-white p-auto z-10">{index + 1}</div>
+            <FlexWrapper flexDirection="flex-col" className="mt-6">
+              <div className={`${customText_3} font-normal pb-2 lg:w-[14rem] md:w-[11rem] h-[3rem] text-center`}>{item.value.title}</div>
+              <Container margined={false} type="card" className={`lg:w-[14rem] md:w-[11rem] lg:h-[11rem] md:h-[10rem] rounded-md shadow-md border ${customText_2} overflow-scroll text-center`}>
+                {item.value.description}
+              </Container>
             </FlexWrapper>
-            <div className={`${listText_2}`}>{item.value.title}</div>
-            <Container type="card" className={`w-[13rem] h-[12rem] rounded-md shadow-sm border ${listText_3}`}>
-              {item.value.description}
-            </Container>
           </FlexWrapper>
         ))}
       </FlexWrapper>
       {/* first Line V */}
-      <div className={`absolute w-[3px] h-[23rem] top-[1rem] right-0 whitespace bg-primary`}></div>
+      <div className={`absolute w-[3px] h-[21rem] top-[1rem] right-0 whitespace bg-primary`}></div>
       {/* second line H */}
-      <div className="absolute w-full h-[3px]  top-[24rem] bg-primary m-auto"></div>
+      <div className="absolute w-full h-[3px]  top-[22rem] bg-primary m-auto"></div>
       {/* second Line V */}
-      <div className={`absolute w-[3px] h-[3rem] top-[24rem] left-0 whitespace bg-primary`}></div>
+      <div className={`absolute w-[3px] h-[3rem] top-[22rem] left-0 whitespace bg-primary`}></div>
       {/* third Line H */}
-      <div className="absolute w-full h-[3px]  top-[27rem] bg-primary m-auto"></div>
-      <FlexWrapper justifyContent="absolute justify-center top-[26rem]">
+      <div className="absolute w-full h-[3px]  top-[25rem] bg-primary m-auto"></div>
+      <FlexWrapper justifyContent="absolute justify-center top-[24rem]">
         {microdataSecondRow.map((item, index) => (
-          <FlexWrapper flexDirection="flex-col">
-            <FlexWrapper className="relative">
+          <>
+            <FlexWrapper flexDirection="flex-col">
               <div className="w-8 h-8 flex justify-center items-center rounded-full bg-primary text-white p-auto z-10">{index + 4}</div>
+              <div className={`${customText_3} font-normal pt-4 pb-2 lg:w-[14rem] md:w-[11rem] text-center h-[3rem]`}>{item.value.title}</div>
+              <Container type="card" className={`lg:w-[14rem] md:w-[11rem] lg:h-[11rem] md:h-[10rem] rounded-md shadow-md border ${customText_2} overflow-scroll text-center`}>
+                {item.value.description}
+              </Container>
             </FlexWrapper>
-            <div className={`${listText_2}`}>{item.value.title}</div>
-            <Container type="card" className={`w-[13rem] h-[12rem] rounded-md shadow-sm border ${listText_3}`}>
-              {item.value.description}
-            </Container>
-          </FlexWrapper>
+          </>
         ))}
       </FlexWrapper>
     </div>
@@ -84,7 +84,7 @@ const StepperMobile = () => {
 };
 
 const CustomizedSteppers = () => {
-  const { isPc } = useResponsiveContext();
+  const { isPc, isTablet, isMobile } = useResponsiveContext();
   return <>{isPc ? <StepperPC /> : <StepperMobile />}</>;
 };
 

@@ -10,6 +10,6 @@ export const listText_3 = "text-base font-poppins font-light py-2 ";
 export const customText_0 = "sm:text-[1.8rem] text-[1.4rem] font-poppins font-semibold mb-4";
 export const customText_1 = "sm:text-[1.1rem] text-[1rem] font-poppins font-light mb-2";
 export const customText_2 = "text-[1rem] text-[0.95rem] font-poppins font-light mb-2";
-
+export const customText_3 = "lg:text-[1rem] text-[0.95rem] font-poppins font-[500] mb-2";
 // contact
 export const fieldStyle = "font-Roboto bg-tertiary px-5 py-3 my-2 md:w-[400px] w-[300px] rounded";
