@@ -44,7 +44,7 @@ const AppOffers = () => {
   return (
     <Container margined={false} backgroundColor="bg-tertiary" className="mt-20">
       <FlexWrapper flexDirection="flex-col">
-        <Section title="What The App Offers" description={""} titleStyle={sectionTitle} />
+        <Section title="What The App Offers" description={""} titleStyle={pageTitle} />
         {appOffersData.map((value) => (
           <ZigZag id={value.id} title={value.title} description={value.description} buttonText={value.buttonText} image={home_iphone} />
         ))}
