@@ -7,11 +7,11 @@ import data from "../../assets/combined/en/translation.json";
 
 import { footerIcons, footerButtons } from "../../assets";
 
-import { listText_2, captionText } from "../../Utils/customStyles";
+import { listText_2, captionText, customText_3, customText_2, customText_4 } from "../../Utils/customStyles";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import { Link } from "react-router-dom";
 const footerPCStyle = `grid grid-cols-3`;
-const footerMobileStyle = `flex flex-col pt-3`;
+const footerMobileStyle = `flex flex-col pt-8`;
 
 const Footer = () => {
   const footerData = data.footer.items;
@@ -22,7 +22,7 @@ const Footer = () => {
         <CustomImage src={app_logo} alt="app_logo" className="w-16 h-16"></CustomImage>
         <div className={isPc ? footerPCStyle : footerMobileStyle}>
           {footerData.map((footerItem) => (
-            <Link to={footerItem.to} key={footerItem.to} className={`${listText_2} px-4`}>
+            <Link to={footerItem.to} key={footerItem.to} className={`${customText_4} px-4`}>
               {footerItem.text}
             </Link>
           ))}

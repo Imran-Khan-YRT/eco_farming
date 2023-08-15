@@ -11,5 +11,7 @@ export const customText_0 = "sm:text-[1.9rem] text-[1.6rem] font-poppins font-se
 export const customText_1 = "sm:text-[1.1rem] text-[1rem] font-poppins font-light mb-2";
 export const customText_2 = "text-[1rem] text-[0.95rem] font-poppins font-light mb-2";
 export const customText_3 = "lg:text-[1rem] text-[0.95rem] font-poppins font-[500] mb-2";
+// footer
+export const customText_4 = "text-[0.95rem] font-poppins font-[400] mb-2";
 // contact
 export const fieldStyle = "font-Roboto bg-tertiary px-5 py-3 my-2 md:w-[400px] w-[300px] rounded";
