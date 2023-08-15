@@ -37,7 +37,12 @@ import feature_playIcon from "./features/feature_playIcon.png";
 import image1 from "./features/image1.png";
 import image2 from "./features/image2.png";
 
+// contact
 import sideContact from "./sideContact.png";
+
+// app overview
+import mobile3 from "./AppOverview/mobile3.png";
+import mobile1 from "./AppOverview/mobile1.png";
 
 export const footerIcons = [footer_facebook, footer_instagram, footer_linkedIn, footer_twitter, footer_youtube];
 export const footerButtons = [footer_app_store, footer_google_play];
@@ -46,3 +51,4 @@ export { app_logo, home_image1, home_image2, home_image3, menuIcon, home_iphone,
 export { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedIn, conact_location, contact_twitter, sideContact };
 
 export { feature_iphone13, feature_playIcon, image1, image2 };
+export { mobile1, mobile3 };
