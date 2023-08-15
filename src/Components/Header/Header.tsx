@@ -10,15 +10,7 @@ import CustomImage from "../CommonComponents/CustomImage";
 import Carousel from "../Home/Carousel";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 
-interface ChildProps {
-  activeLink: string;
-  setActiveLink: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const HeaderPc: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
-  };
+const HeaderPc = () => {
   const headerData = data.header.menu;
   return (
     <Container margined={false} type="card" className="md:py-4 mb-0 shadow-md sticky top-0 z-50">
@@ -27,7 +19,7 @@ const HeaderPc: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
         <FlexWrapper gap="gap-8">
           {headerData.map((menuItem) => (
-            <Link to={menuItem.to} key={menuItem.to} onClick={() => handleLinkClick(menuItem.to)}>
+            <Link to={menuItem.to} key={menuItem.to}>
               {menuItem.text}
             </Link>
           ))}
@@ -38,7 +30,7 @@ const HeaderPc: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
   );
 };
 
-const HeaderMobile: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
+const HeaderMobile = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerData = data.header.menu;
   const toggleMenu = () => {
@@ -50,11 +42,11 @@ const HeaderMobile: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
     setIsMenuOpen(false);
   };
   const handleLinkClick = (link: string) => {
-    setActiveLink(link);
     closeMenu();
   };
+
   return (
-    <Container margined={false} paddinged={false} className={`relative w-full`}>
+    <Container margined={false} paddinged={false} className={`relative w-full !pt-0`}>
       <Container className="fixed top-8 w-[80%]  z-50 border  rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-1">
         <FlexWrapper className="justify-between">
           {/* md doesnt get priority because of samll screen + working fine but not happy*/}
@@ -80,10 +72,10 @@ const HeaderMobile: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
   );
 };
 
-const Header: React.FC<ChildProps> = ({ activeLink, setActiveLink }) => {
+const Header = () => {
   const { isPc } = useResponsiveContext();
   // console.log(isMobile, isTablet, isPc);
-  return <>{isPc ? <HeaderPc activeLink={activeLink} setActiveLink={setActiveLink} /> : <HeaderMobile activeLink={activeLink} setActiveLink={setActiveLink} />}</>;
+  return <>{isPc ? <HeaderPc /> : <HeaderMobile />}</>;
 };
 
 export default Header;

@@ -6,12 +6,11 @@ import GetRoutes from "./Utils/GetRoutes/GetRoutes";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
-  const [activeLink, setActiveLink] = useState("home");
   return (
     <div className="w-full">
-      <Header activeLink={activeLink} setActiveLink={setActiveLink} />
+      <Header />
       <GetRoutes />
-      <Footer activeLink={activeLink} setActiveLink={setActiveLink} />
+      <Footer />
     </div>
   );
 }

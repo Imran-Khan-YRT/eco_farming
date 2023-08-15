@@ -69,7 +69,7 @@ const OverviewPc = () => {
   const { isPc } = useResponsiveContext();
   return (
     <>
-      <Container margined={false} paddinged={false}>
+      <Container margined={false} paddinged={false} className="pt-0">
         <FlexWrapper className="md:pl-20 md:justify-between justify-center gap-10">
           <FlexWrapper flexDirection="flex-col" justifyContent="" className="pl-4">
             <Section title={overViewData.title} description={overViewData.content} className="max-w-[400px]" titleStyle={pageTitle}></Section>

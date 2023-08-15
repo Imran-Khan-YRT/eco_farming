@@ -19,7 +19,10 @@ const getMargin = (margined: boolean, type: "card" | "component") => {
 
 // work left for padding
 const getPadding = (paddinged: boolean, type: "card" | "component") => {
-  if (!paddinged) return "p-0 pb-8";
+  if (!paddinged) {
+    if (type === "card") return "pt-10";
+    else if (type === "component") return "pt-24";
+  }
   let padding = type === "card" ? "md:p-8 p-4" : "md:p-12 p-8";
   return padding;
 };
