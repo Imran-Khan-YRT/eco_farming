@@ -9,7 +9,6 @@ import { captionText, listText_2, listText_3 } from "../../Utils/customStyles";
 interface Feedback {
   name: string;
   comment: string;
-  rating: number;
 }
 
 interface FeedbackProps {
@@ -31,13 +30,13 @@ const FeedbackComponent: React.FC<FeedbackProps> = ({ feedback }) => {
 
   const FeedbackCard = () => {
     return (
-      <Container margined={false} paddinged={false} className="h-screen">
+      <Container margined={false} paddinged={false}>
         <FlexWrapper className="pt-20 justify-center">
           <img className={"w-6 h-6 cursor-pointer"} src={left_arrow} alt={"left_arrow"} onClick={handlePrevClick} />
           <Container type="card" className="md:w-[40%] w-[70%] rounded relative" backgroundColor="bg-[#F2FFF6]">
-            <img className={"absolute sm:-top-12  -top-5 sm:left-[40%] left-[30%] md:w-20 sm:w-16 w-12  md:h-20 sm:h-16 h-12 rounded-full  z-20"} src={person} alt={"person"} />
+            <img className={"absolute sm:-top-12  -top-5 left-[40%] md:w-20 sm:w-16 w-12  md:h-20 sm:h-16 h-12 rounded-full  z-20"} src={person} alt={"person"} />
             <FlexWrapper flexDirection="flex-col pt-4">
-              <div className={`${listText_3}`}>
+              <div className={`${listText_3} max-h-[200px] overflow-scroll`}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt eni Lorem ipsum dolor sit amet, consectetur ad{" "}
               </div>
               <div>Alisa Albert</div>

@@ -2,12 +2,13 @@ import React from "react";
 import Container from "../CommonComponents/Container";
 import Section from "../CommonComponents/Section";
 import data from "../../assets/combined/en/translation.json";
-import { home_image1, home_image2, home_image3, home_iphone, sellingAnt, home_sell_field, home_women, handIcon } from "../../assets";
+import { home_image1, home_image2, home_image3, home_iphone, sellingAnt, home_sell_field, home_women, footerButtons, mobile2 } from "../../assets";
+import { innovationIcon, pageIcon, homeIcon, handIcon } from "../../assets";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import ZigZag from "../CommonComponents/ZigZag";
-import { listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import { captionText, customText_0, customText_1, customText_3, customText_4, listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import Carousel from "./Carousel";
@@ -41,7 +42,7 @@ const OverViewButtons = () => {
 const AppOffers = () => {
   const appOffersData = data.home.appOffers;
   return (
-    <Container margined={false} backgroundColor="bg-tertiary">
+    <Container margined={false} backgroundColor="bg-tertiary" className="mt-20">
       <FlexWrapper flexDirection="flex-col">
         <Section title="What The App Offers" description={""} titleStyle={sectionTitle} />
         {appOffersData.map((value) => (
@@ -130,24 +131,24 @@ const SustainableSolution = () => {
           <Section title={"Sustainable Farm Solutionfor a Better Tomorrow"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"} />
           {/* change with real data use grid later */}
           <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
-            {Array(2)
-              .fill(5)
-              .map((_) => (
-                <FlexWrapper>
-                  <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
-                  <div className={listText_3}> 100% Satisfaction</div>
-                </FlexWrapper>
-              ))}
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
+              <div className={listText_3}> 100% Satisfaction</div>
+            </FlexWrapper>
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={innovationIcon} alt={""} />
+              <div className={listText_3}> Innovative Solution</div>
+            </FlexWrapper>
           </FlexWrapper>
-          <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
-            {Array(2)
-              .fill(5)
-              .map((_) => (
-                <FlexWrapper>
-                  <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
-                  <div className={listText_3}> 100% Satisfaction</div>
-                </FlexWrapper>
-              ))}
+          <FlexWrapper className="sm:flex-row flex-col sm:gap-12 gap-2">
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={pageIcon} alt={""} />
+              <div className={listText_3}> Microfinance.</div>
+            </FlexWrapper>
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={homeIcon} alt={""} />
+              <div className={listText_3}> Precision farming</div>
+            </FlexWrapper>
           </FlexWrapper>
         </FlexWrapper>
       </FlexWrapper>
@@ -155,33 +156,55 @@ const SustainableSolution = () => {
   );
 };
 
+// some dummy data format added  to use later- not used yet -still static
 interface Feedback {
   name: string;
   comment: string;
-  rating: number;
 }
 
 const feedbackData: Feedback[] = [
   {
     name: "Client A",
     comment: "Excellent service! Highly recommended.",
-    rating: 5,
   },
   {
     name: "Client B",
     comment: "Good experience overall.",
-    rating: 4,
   },
   // Add more feedback items as needed
 ];
 
 const Feedbacks = () => {
   return (
-    <Container>
+    <Container margined={false} className="!pt-0">
       <FlexWrapper justifyContent="justify-center" className="items-center">
-        <Section title="Best Feedback From Happy Clients" description="We take pride in providing our customers with the highest quality, sustainable agriculture solutions. " titleStyle={pageTitle} />
+        <Section
+          title="Best Feedback From Happy Clients"
+          description="We take pride in providing our customers with the highest quality, sustainable agriculture solutions. "
+          titleStyle={sectionTitle}
+        />
       </FlexWrapper>
       <FeedbackComponent feedback={feedbackData} />
+    </Container>
+  );
+};
+
+const DownloadSection = () => {
+  return (
+    <Container margined={false}>
+      <FlexWrapper justifyContent="justify-between" className="items-center md:flex-row flex-col-reverse">
+        <FlexWrapper flexDirection="flex-col" className=" !items-start ">
+          <div className={`${sectionTitle} !pb-0`}>MIMIDZI App</div>
+          <div className={`${listText_1} !pt-0`}>Download Now</div>
+          <div className={`${captionText} max-w-[250px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+          <FlexWrapper className="gap-4 pt-4">
+            {footerButtons.map((value) => (
+              <CustomImage src={value} alt="footer btns" className="w-24" />
+            ))}
+          </FlexWrapper>
+        </FlexWrapper>
+        <CustomImage className={"pl-0"} src={mobile2} alt={""}></CustomImage>
+      </FlexWrapper>
     </Container>
   );
 };
@@ -196,6 +219,7 @@ const Home = () => {
       <SellingPoints />
       <SustainableSolution />
       <Feedbacks />
+      <DownloadSection />
     </>
   );
 };
