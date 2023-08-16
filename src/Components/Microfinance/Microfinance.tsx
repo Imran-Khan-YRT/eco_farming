@@ -5,7 +5,7 @@ import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
 import "./microfinance.css";
 import CustomizedSteppers from "./Stepper";
-import { customText_0, customText_1, pageTitle, sectionDescription, sectionTitle } from "../../Utils/customStyles";
+import { customText_0, customText_1, mobileViewPadding, pageTitle, sectionDescription, sectionTitle } from "../../Utils/customStyles";
 import { customText_2 } from "../../Utils/customStyles";
 
 const MicrofinanceWorkList = () => {
@@ -24,7 +24,7 @@ const MicrofinanceWorkList = () => {
 const Microfinance = () => {
   return (
     <>
-      <Container margined={false} className=" w-full lg:mx-20 md:mx-16 sm:mx-8">
+      <Container margined={false} className={`w-full lg:mx-20 md:mx-16 sm:mx-8 ${mobileViewPadding}`}>
         <Section title={data.microfinance.title} description={<MicrofinanceWorkList />} titleStyle={`${customText_0} mb-4`} descriptionStyle="pl-4"></Section>
       </Container>
       <Section title={data.microfinance.apply_for_loan.title} description={""} titleStyle={`${customText_0} md:mx-28 mx-10 `}></Section>

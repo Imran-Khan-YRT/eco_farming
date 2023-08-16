@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../CommonComponents/Section";
 import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
-import { customText_0, customText_1, customText_2, customText_3, sectionTitle } from "../../Utils/customStyles";
+import { customText_0, customText_1, customText_2, customText_3, mobileViewPadding, sectionTitle } from "../../Utils/customStyles";
 import Container from "../CommonComponents/Container";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
@@ -98,7 +98,7 @@ const PopularQuestion = () => {
 
 const Help = () => {
   return (
-    <Container margined={false}>
+    <Container margined={false} className={`${mobileViewPadding}`}>
       <FlexWrapper justifyContent="justify-center" className="items-center flex-wrap">
         <Section title={data.help.title} description={<HelpList />} titleStyle={`${customText_0} mb-4`} descriptionStyle="pl-4"></Section>;
         <CustomImage className={""} src={mobile2} alt={"mobile2"}></CustomImage>

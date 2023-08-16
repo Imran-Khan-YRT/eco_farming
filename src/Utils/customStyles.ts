@@ -15,3 +15,4 @@ export const customText_3 = "lg:text-[1rem] text-[0.95rem] font-poppins font-[50
 export const customText_4 = "text-[0.95rem] font-poppins font-[400] mb-2";
 // contact
 export const fieldStyle = "font-Roboto bg-tertiary px-5 py-3 my-2 md:w-[400px] w-[300px] rounded";
+export const mobileViewPadding = "md:pt-14 pt-28";

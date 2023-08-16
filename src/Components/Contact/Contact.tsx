@@ -7,14 +7,14 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import { contact_logo, contact_call, contact_email, contact_facebook, contact_linkedIn, conact_location, contact_twitter, sideContact } from "../../assets";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
-import { customText_1, pageTitle } from "../../Utils/customStyles";
+import { customText_1, mobileViewPadding, pageTitle } from "../../Utils/customStyles";
 import SkewedBacground from "../CommonComponents/SkewedBackground/SkewedBackground";
 
 const ContactForm = () => {
   const { isPc } = useResponsiveContext();
   return (
     <SkewedBacground>
-      <Container className="md:border rounded-lg relative top-2">
+      <Container className={`md:border rounded-lg relative top-2 ${mobileViewPadding}`}>
         {isPc && (
           <>
             <img src={sideContact} alt="sidebar" className=" w-10 h-32 absolute bottom-2 -right-10 " />
