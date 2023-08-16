@@ -129,8 +129,26 @@ const SustainableSolution = () => {
         </FlexWrapper>
         <FlexWrapper flexDirection="flex-col" className="max-w-[350px] items-start">
           <Section title={"Sustainable Farm Solutionfor a Better Tomorrow"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"} />
-          {/* change with real data use grid later */}
-          <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
+          <div className="grid md:grid-cols-2 grid-cols-1 w-full m-auto pt-1">
+            {/* use map later if required */}
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
+              <div className={listText_3}> 100% Satisfaction</div>
+            </FlexWrapper>
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={innovationIcon} alt={""} />
+              <div className={listText_3}> Innovative Solution</div>
+            </FlexWrapper>
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={pageIcon} alt={""} />
+              <div className={listText_3}> Microfinance.</div>
+            </FlexWrapper>
+            <FlexWrapper gap="gap-1">
+              <CustomImage className={"w-7 h-7"} src={homeIcon} alt={""} />
+              <div className={listText_3}> Precision farming</div>
+            </FlexWrapper>
+          </div>
+          {/* <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
             <FlexWrapper gap="gap-1">
               <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
               <div className={listText_3}> 100% Satisfaction</div>
@@ -149,7 +167,7 @@ const SustainableSolution = () => {
               <CustomImage className={"w-7 h-7"} src={homeIcon} alt={""} />
               <div className={listText_3}> Precision farming</div>
             </FlexWrapper>
-          </FlexWrapper>
+          </FlexWrapper> */}
         </FlexWrapper>
       </FlexWrapper>
     </Container>
