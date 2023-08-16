@@ -8,7 +8,7 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import ZigZag from "../CommonComponents/ZigZag";
-import { captionText, customText_0, customText_1, customText_2, customText_3, customText_4, listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import { captionText, customText_0, customText_1, customText_2, customText_3, customText_4, listText_1, listText_2, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import Carousel from "./Carousel";
@@ -204,18 +204,18 @@ const Feedbacks = () => {
 const DownloadSection = () => {
   return (
     <Container margined={false}>
-      <FlexWrapper justifyContent="justify-between" className="items-center md:flex-row flex-col-reverse">
+      <FlexWrapper justifyContent="justify-center" className="items-center md:flex-row flex-col-reverse">
         <FlexWrapper flexDirection="flex-col" className=" !items-start ">
-          <div className={`${sectionTitle} !pb-0`}>MIMIDZI App</div>
-          <div className={`${listText_1} !pt-0`}>Download Now</div>
-          <div className={`${captionText} max-w-[250px]`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+          <div className={`${sectionTitle} !pb-2`}>MIMIDZI App</div>
+          <div className={`${customText_4} font-semibold`}>Download Now</div>
+          <div className={`${listText_3} max-w-[250px] !pt-0`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
           <FlexWrapper className="gap-4 pt-4">
             {footerButtons.map((value) => (
               <CustomImage src={value} alt="footer btns" className="w-24" />
             ))}
           </FlexWrapper>
         </FlexWrapper>
-        <CustomImage className={"pl-0"} src={mobile2} alt={""}></CustomImage>
+        <CustomImage className={"pl-0 h-[500px]"} src={mobile2} alt={""}></CustomImage>
       </FlexWrapper>
     </Container>
   );
