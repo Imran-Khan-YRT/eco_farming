@@ -12,6 +12,7 @@ import { captionText, customText_0, customText_1, customText_2, customText_3, cu
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import Carousel from "./Carousel";
+import { person } from "../../assets";
 
 const OverViewButtons = () => {
   const overViewData = data.home.overview;
@@ -158,16 +159,28 @@ const SustainableSolution = () => {
 interface Feedback {
   name: string;
   comment: string;
+  image: string;
+  country: string;
 }
 
 const feedbackData: Feedback[] = [
   {
-    name: "Client A",
-    comment: "Excellent service! Highly recommended.",
+    name: "Alisa Albert",
+    comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt eni Lorem ipsum dolor sit amet, consectetur ad",
+    image: person,
+    country: "United Kingdom",
   },
   {
-    name: "Client B",
-    comment: "Good experience overall.",
+    name: "Frodo Baggins",
+    comment: "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt eni Lorem ipsum dolor sit amet, consectetur ad",
+    image: person,
+    country: "Middle Earth Shire",
+  },
+  {
+    name: "Gandalf the grey",
+    comment: "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreUt eni Lorem ipsum dolor sit amet, consectetur ad",
+    image: person,
+    country: "Middle Earth Shire",
   },
   // Add more feedback items as needed
 ];
