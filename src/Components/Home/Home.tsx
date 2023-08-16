@@ -8,7 +8,7 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import ZigZag from "../CommonComponents/ZigZag";
-import { captionText, customText_0, customText_1, customText_3, customText_4, listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import { captionText, customText_0, customText_1, customText_2, customText_3, customText_4, listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import Carousel from "./Carousel";
@@ -148,26 +148,6 @@ const SustainableSolution = () => {
               <div className={listText_3}> Precision farming</div>
             </FlexWrapper>
           </div>
-          {/* <FlexWrapper className="sm:flex-row flex-col sm:gap-4 gap-2">
-            <FlexWrapper gap="gap-1">
-              <CustomImage className={"w-7 h-7"} src={handIcon} alt={""} />
-              <div className={listText_3}> 100% Satisfaction</div>
-            </FlexWrapper>
-            <FlexWrapper gap="gap-1">
-              <CustomImage className={"w-7 h-7"} src={innovationIcon} alt={""} />
-              <div className={listText_3}> Innovative Solution</div>
-            </FlexWrapper>
-          </FlexWrapper>
-          <FlexWrapper className="sm:flex-row flex-col sm:gap-12 gap-2">
-            <FlexWrapper gap="gap-1">
-              <CustomImage className={"w-7 h-7"} src={pageIcon} alt={""} />
-              <div className={listText_3}> Microfinance.</div>
-            </FlexWrapper>
-            <FlexWrapper gap="gap-1">
-              <CustomImage className={"w-7 h-7"} src={homeIcon} alt={""} />
-              <div className={listText_3}> Precision farming</div>
-            </FlexWrapper>
-          </FlexWrapper> */}
         </FlexWrapper>
       </FlexWrapper>
     </Container>
@@ -194,12 +174,13 @@ const feedbackData: Feedback[] = [
 
 const Feedbacks = () => {
   return (
-    <Container margined={false} className="!pt-0">
-      <FlexWrapper justifyContent="justify-center" className="items-center">
+    <Container margined={false} paddinged={false} className="!pt-0">
+      <FlexWrapper justifyContent="justify-center" className="items-center text-center">
         <Section
           title="Best Feedback From Happy Clients"
           description="We take pride in providing our customers with the highest quality, sustainable agriculture solutions. "
           titleStyle={sectionTitle}
+          descriptionStyle={customText_2}
         />
       </FlexWrapper>
       <FeedbackComponent feedback={feedbackData} />
