@@ -19,7 +19,7 @@ const HeaderPc = () => {
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
         <FlexWrapper gap="gap-8">
           {headerData.map((menuItem) => (
-            <Link to={menuItem.to} key={menuItem.to}>
+            <Link to={menuItem.to} key={menuItem.to} className=" hover:underline">
               {menuItem.text}
             </Link>
           ))}

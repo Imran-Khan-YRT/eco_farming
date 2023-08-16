@@ -22,7 +22,7 @@ const Footer = () => {
         <CustomImage src={app_logo} alt="app_logo" className="w-16 h-16"></CustomImage>
         <div className={isPc ? footerPCStyle : footerMobileStyle}>
           {footerData.map((footerItem) => (
-            <Link to={footerItem.to} key={footerItem.to} className={`${customText_4} px-4`}>
+            <Link to={footerItem.to} key={footerItem.to} className={`${customText_4} px-4 hover:underline`}>
               {footerItem.text}
             </Link>
           ))}
