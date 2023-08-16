@@ -30,10 +30,10 @@ const ZigZag: React.FC<ZigZagProps> = ({
   className,
 }) => {
   return (
-    <Container margined={false} paddinged={false} type="card" className="w-full" backgroundColor={backgroundColor}>
-      <FlexWrapper className={`${id % 2 === 0 ? "flex-row-reverse" : "flex-row"}  justify-center items-center  lg:gap-24 flex-wrap`}>
-        <CustomImage src={image} alt={`image-${id}`} className="md:w-[25rem] w-[20rem] lg:h-[500px] h-[400px]" />
-        <FlexWrapper flexDirection="flex-col" className="md:w-[20rem] w-full gap-4 lg:items-start items-center" justifyContent="justify-center">
+    <Container margined={false} paddinged={false} type="card" className="w-full !pt-0" backgroundColor={backgroundColor}>
+      <FlexWrapper className={`${id % 2 === 1 ? "flex-row-reverse" : "flex-row"}  justify-center lg:gap-24 md:gap-16 flex-wrap`}>
+        <CustomImage src={image} alt={`image-${id}`} className="w-[20rem] lg:h-[500px] h-[400px] " />
+        <FlexWrapper flexDirection="flex-col" className={`w-[20rem] gap-4 items-start`} justifyContent="justify-center">
           {topButtonImage != "" && <CustomImage src={topButtonImage} alt={`imageBtn`} className="w-32" />}
           <Section title={title} description={description} titleColor="text-black" titleStyle={`${titleStyle}`} className="max-w-[400px]" />
           <CustomButton>{buttonText}</CustomButton>

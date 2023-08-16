@@ -15,7 +15,7 @@ const StepperPC: React.FC<ContentProps> = () => {
   const microdataSecondRow = getArrayFromObj(data.microfinance.apply_for_loan.step).slice(3);
   console.log(microdataFirstRow);
   return (
-    // Lots of calculation - very poor code
+    // Lots of calculation - Blame the design
     <div className="max-w-[57rem] relative m-auto h-screen overflow-hidden">
       {/* first line H */}
       <div className="absolute w-full h-[3px] top-[1rem] left-[8rem] bg-primary m-auto"></div>

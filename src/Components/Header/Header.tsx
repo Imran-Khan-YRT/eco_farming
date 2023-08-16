@@ -49,7 +49,7 @@ const HeaderMobile = () => {
     <Container margined={false} paddinged={false} className={`relative w-full !pt-0`}>
       <Container className="fixed top-8 w-[80%]  z-50 border  rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-1">
         <FlexWrapper className="justify-between">
-          {/* md doesnt get priority because of samll screen + working fine but not happy*/}
+          {/* md doesnt get priority because of samll screen + working fine but room for improvement */}
           <CustomImage src={app_logo} alt="app_logo" className="w-10 h-10"></CustomImage>
           <div onClick={toggleMenu}>
             <CustomImage src={menuIcon} alt="menu_icon" className="w-6 h-6"></CustomImage>

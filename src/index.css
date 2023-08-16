@@ -18,3 +18,12 @@ code {
 * {
   box-sizing: border-box;
 }
+
+/* somehow scrollbar vanishes - why */
+::-webkit-scrollbar {
+  width: 12px; /* Adjust this value as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  width: 12px; /* Adjust this value to match the width of the track */
+}
