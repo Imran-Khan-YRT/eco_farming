@@ -28,6 +28,7 @@ const ZigZag: React.FC<ZigZagProps> = ({
   backgroundColor = "bg-tertiary",
   topButtonImage = "",
   titleStyle = sectionTitle,
+  descriptionStyle = "",
   className,
 }) => {
   return (
@@ -36,8 +37,8 @@ const ZigZag: React.FC<ZigZagProps> = ({
         <CustomImage src={image} alt={`image-${id}`} className="md:w-[50%] w-[80%] md:h-[330px] h-[300px]" />
         <FlexWrapper flexDirection="flex-col" className={`md:w-[50%] w-[70%] gap-4 !items-start`} justifyContent="justify-center">
           {topButtonImage != "" && <CustomImage src={topButtonImage} alt={`imageBtn`} className="w-32" />}
-          <Section title={title} description={description} titleColor="text-black" titleStyle={`${titleStyle}`} className="max-w-[400px]" />
-          <CustomButton>{buttonText}</CustomButton>
+          <Section title={title} description={description} titleColor="text-black" titleStyle={`${titleStyle}`} descriptionStyle={`${descriptionStyle}`} className="max-w-[400px]" />
+          {buttonText != "" && <CustomButton>{buttonText}</CustomButton>}
         </FlexWrapper>
       </FlexWrapper>
     </Container>

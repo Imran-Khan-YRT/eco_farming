@@ -21,9 +21,10 @@ code {
 
 /* somehow scrollbar vanishes - why */
 ::-webkit-scrollbar {
-  width: 12px; /* Adjust this value as needed */
+  height: 10px;
+  width: 0px; /* Adjust this value as needed */
 }
 
 ::-webkit-scrollbar-thumb {
-  width: 12px; /* Adjust this value to match the width of the track */
+  /* Adjust this value to match the width of the track */
 }

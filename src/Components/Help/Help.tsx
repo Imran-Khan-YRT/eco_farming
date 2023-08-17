@@ -100,11 +100,7 @@ const PopularQuestion = () => {
 const Help = () => {
   return (
     <Container margined={false} className={`${mobileViewPadding}`}>
-      <ZigZag title={data.help.title} description={<HelpList />} buttonText="LEARN MORE" id={1} image={mobile2} backgroundColor="bg-white"></ZigZag>
-      {/* <FlexWrapper justifyContent="justify-center" className="items-center flex-wrap">
-        <Section title={data.help.title} description={<HelpList />} titleStyle={`${customText_0} mb-4`} descriptionStyle="pl-4"></Section>;
-        <CustomImage className={""} src={mobile2} alt={"mobile2"}></CustomImage>
-      </FlexWrapper> */}
+      <ZigZag title={data.help.title} description={<HelpList />} id={1} image={mobile2} backgroundColor="bg-white" descriptionStyle={"pl-8"}></ZigZag>
       <Troublesooting />
       <FrequentAskedQuestions />
       <PopularQuestion />

@@ -10,11 +10,11 @@ interface sectionProps {
   descriptionStyle?: string;
 }
 
-const Section: React.FC<sectionProps> = ({ title, description, className = "", titleColor = "", titleStyle = sectionTitle, descriptionStyle = sectionDescription }) => {
+const Section: React.FC<sectionProps> = ({ title, description = "", className = "", titleColor = "", titleStyle = sectionTitle, descriptionStyle = sectionDescription }) => {
   return (
     <FlexWrapper flexDirection="flex-col" className={` ${className} max-h-[400px] overflow-scroll`} justifyContent="flex-start">
       <div className={`${titleColor} ${titleStyle}`}>{title}</div>
-      <div className={descriptionStyle}>{description}</div>
+      {description != "" && <div className={descriptionStyle}>{description}</div>}
     </FlexWrapper>
   );
 };
