@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Section from "./Section";
 import CustomButton from "./CustomButton";
 import FlexWrapper from "./FlexWrapper";
@@ -9,7 +9,7 @@ import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContex
 interface ZigZagProps {
   title: string;
   id?: number;
-  description?: string;
+  description?: string | ReactNode;
   buttonText?: string;
   image?: string;
   className?: string;

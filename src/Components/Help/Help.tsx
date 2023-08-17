@@ -9,6 +9,7 @@ import CustomImage from "../CommonComponents/CustomImage";
 import { mobile2 } from "../../assets";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsChevronDown, BsChevronRight } from "react-icons/bs";
+import ZigZag from "../CommonComponents/ZigZag";
 
 const HelpList = () => {
   const helpData = getArrayFromObj(data.help.steps);
@@ -99,10 +100,11 @@ const PopularQuestion = () => {
 const Help = () => {
   return (
     <Container margined={false} className={`${mobileViewPadding}`}>
-      <FlexWrapper justifyContent="justify-center" className="items-center flex-wrap">
+      <ZigZag title={data.help.title} description={<HelpList />} buttonText="LEARN MORE" id={1} image={mobile2} backgroundColor="bg-white"></ZigZag>
+      {/* <FlexWrapper justifyContent="justify-center" className="items-center flex-wrap">
         <Section title={data.help.title} description={<HelpList />} titleStyle={`${customText_0} mb-4`} descriptionStyle="pl-4"></Section>;
         <CustomImage className={""} src={mobile2} alt={"mobile2"}></CustomImage>
-      </FlexWrapper>
+      </FlexWrapper> */}
       <Troublesooting />
       <FrequentAskedQuestions />
       <PopularQuestion />
