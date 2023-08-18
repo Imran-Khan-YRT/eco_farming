@@ -36,7 +36,7 @@ const HeaderMobile = () => {
   const innerButtonRef = useRef<HTMLDivElement | null>(null);
 
   const toggleMenu = () => {
-    console.log(isMenuOpen);
+    // console.log(isMenuOpen);
     setIsMenuOpen((prev) => !prev);
   };
 

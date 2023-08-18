@@ -13,7 +13,7 @@ interface ContentProps {
 const StepperPC: React.FC<ContentProps> = () => {
   const microdataFirstRow = getArrayFromObj(data.microfinance.apply_for_loan.step).slice(0, 3);
   const microdataSecondRow = getArrayFromObj(data.microfinance.apply_for_loan.step).slice(3);
-  console.log(microdataFirstRow);
+  // console.log(microdataFirstRow);
   return (
     // Lots of calculation - Blame the design
     <div className="max-w-[57rem] relative m-auto h-screen overflow-hidden">

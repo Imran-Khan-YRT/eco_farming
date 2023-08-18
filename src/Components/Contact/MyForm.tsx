@@ -20,7 +20,7 @@ const validationSchema = Yup.object().shape({
 const MyForm: React.FC = () => {
   const handleSubmit = (values: FormValues, { setSubmitting }: any) => {
     // Do something with the form values (e.g., submit data to the server)
-    console.log(values);
+    // console.log(values);
     setSubmitting(false);
   };
 
