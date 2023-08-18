@@ -14,6 +14,12 @@ const footerPCStyle = `grid grid-cols-3`;
 const footerMobileStyle = `flex flex-col pt-8`;
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const footerData = data.footer.items;
   const { isPc } = useResponsiveContext();
   return (
@@ -22,7 +28,7 @@ const Footer = () => {
         <CustomImage src={app_logo} alt="app_logo" className="w-16 h-16"></CustomImage>
         <div className={isPc ? footerPCStyle : footerMobileStyle}>
           {footerData.map((footerItem) => (
-            <Link to={footerItem.to} key={footerItem.to} className={`${customText_4} px-4 hover:underline`}>
+            <Link to={footerItem.to} key={footerItem.to} className={`${customText_4} px-4 hover:underline`} onClick={scrollToTop}>
               {footerItem.text}
             </Link>
           ))}
