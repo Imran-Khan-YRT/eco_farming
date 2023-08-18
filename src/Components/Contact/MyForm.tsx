@@ -49,7 +49,7 @@ const MyForm: React.FC = () => {
           </div>
 
           <div>
-            <Field as="textarea" name="problems" id="problems" rows={4} className={fieldStyle} placeholder="Define Your Problem" />
+            <Field as="textarea" name="problems" id="problems" rows={4} className={`${fieldStyle} min-h-[100px] max-h-[250px]`} placeholder="Define Your Problem" />
             <ErrorMessage name="problems" component="div" className="error" />
           </div>
 
