@@ -28,7 +28,7 @@ const Troublesooting = () => {
   const troubleshootingData = data.help.troublesooting.steps;
   return (
     <>
-      <div className={`${sectionTitle} text-center`}>{data.help.troublesooting.title}</div>
+      <div className={`${sectionTitle} text-center md:pb-16 pb-8`}>{data.help.troublesooting.title}</div>
       <FlexWrapper justifyContent="justify-center">
         <div className="grid md:grid-cols-3 grid-cols-1 items-center">
           {troubleshootingData.map((item) => (
@@ -45,11 +45,11 @@ const Troublesooting = () => {
 const FrequentAskedQuestions = () => {
   const questions = getArrayFromObj(data.help.frequentlyAsked.questions);
   return (
-    <>
+    <Container paddinged={false} className="!pb-20">
       <div className={`${sectionTitle} text-center`}>{data.help.frequentlyAsked.title}</div>
-      <FlexWrapper justifyContent="justify-center" flexDirection="flex-col">
+      <FlexWrapper justifyContent="justify-center" flexDirection="flex-col" className="w-full">
         {questions.map((item) => (
-          <div className="lg:w-[60%] md:w-[70%] w-[85%]  rounded-md m-auto my-2 bg-tertiary p-2 px-8">
+          <div className=" rounded-md m-auto my-2 bg-tertiary p-2 px-8 lg:w-[70%] md:w-[78%] w-[90%]">
             <FlexWrapper className="justify-between items-center justify-items-center">
               <div className={`${customText_2} w-[95%]`}>{item.value}</div>
               <div className="font-semibold text-[1.2rem]">+</div>
@@ -57,40 +57,42 @@ const FrequentAskedQuestions = () => {
           </div>
         ))}
       </FlexWrapper>
-    </>
+    </Container>
   );
 };
 
 const PopularQuestion = () => {
   const popularQuestions = getArrayFromObj(data.help.popularQurstions.questions);
   return (
-    <Container backgroundColor="bg-tertiary">
+    <Container backgroundColor="bg-tertiary" className="rounded-lg shadow-sm">
       <FlexWrapper flexDirection="flex-col" justifyContent="justify-center">
         <div className={`${sectionTitle} text-center`}>{data.help.popularQurstions.title}</div>
-        <FlexWrapper justifyContent="justify-between" className="max-w-full bg-white items-center px-4 rounded-full m-auto text-center">
+        <FlexWrapper justifyContent="justify-between" className="max-w-full bg-white items-center px-4 rounded-full m-auto text-center" gap="gap-2">
           <div className={`${customText_2} pt-2`}>{data.help.popularQurstions.search}</div>
           <AiOutlineSearch />
         </FlexWrapper>
-        <FlexWrapper justifyContent="justify-between" className="md:w-[80%] m-auto">
-          <FlexWrapper gap="gap-1">
+        <FlexWrapper justifyContent="justify-between" className={`md:w-[80%] m-auto ${customText_3} pt-8`}>
+          <FlexWrapper gap="gap-1.5">
             <div>Popular questions </div>
-            <BsChevronDown />
+            <BsChevronDown className="pt-1" />
           </FlexWrapper>
-          <FlexWrapper gap="gap-1" className="md:block hidden">
-            <div>All Answers</div>
-            <BsChevronRight />
-          </FlexWrapper>
+          <div className="md:block hidden">
+            <FlexWrapper gap="gap-1.5" className="items-center">
+              <div>All Answers</div>
+              <BsChevronRight className="pt-1" />
+            </FlexWrapper>
+          </div>
         </FlexWrapper>
-        <div className="grid md:grid-cols-2 grid-cols-1 items-center">
+        <div className="grid md:grid-cols-2 grid-cols-1 items-start pt-4">
           {popularQuestions.map((item) => (
-            <div className="lg:w-[60%] md:w-[70%] w-[85%]   m-auto my-2 bg-tertiary ">
-              <div className="bg-white rounded-md p-2 px-2">{item.value}</div>
+            <div className="lg:w-[60%] md:w-[70%] w-[85%]   m-auto my-2 bg-tertiary">
+              <div className={`bg-white rounded-lg p-2 px-4 shadow-md ${customText_2}`}>{item.value}</div>
             </div>
           ))}
         </div>
         <FlexWrapper gap="gap-1" className="md:hidden block m-auto">
           <div>All Answers</div>
-          <BsChevronRight />
+          <BsChevronRight className="pt-1" />
         </FlexWrapper>
       </FlexWrapper>
     </Container>
