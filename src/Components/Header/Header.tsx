@@ -31,7 +31,7 @@ const HeaderPc: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
                 setActiveLink(menuItem.to);
                 scrollToTop();
               }}
-              className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? "border rounded-lg p-2 shadow-inner text-secondary font-bold" : ""}`}
+              className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? " border rounded-lg px-4 py-2 shadow-inner text-secondary font-bold" : ""}`}
             >
               {menuItem.text}
             </Link>
@@ -103,13 +103,12 @@ const HeaderMobile: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
                   handleLinkClick(menuItem.to);
                   scrollToTop();
                 }}
-                className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? " bg-white  border-[1px]  rounded-lg p-2 shadow-inner text-secondary " : ""}`}
+                className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? " bg-white  border-[1px]  rounded-lg px-4 py-2  shadow-inner text-secondary " : ""}`}
               >
                 {menuItem.text}
               </Link>
             ))}
             <CustomButton>{data.header.button.downloadSignUp}</CustomButton>
-            {/* <div ref={innerButtonRef}></div> */}
           </FlexWrapper>
         </Container>
       )}
