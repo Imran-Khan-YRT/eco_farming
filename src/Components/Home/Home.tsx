@@ -21,16 +21,16 @@ const OverViewButtons = () => {
       <FlexWrapper flexDirection="flex-col" justifyContent="flex-start" className="grid-cols-2 pt-10" gap="gap-2">
         <FlexWrapper className="mb-2 " justifyContent="flex-start" gap="gap-4">
           <CustomButton>{overViewData.button.ourProducts}</CustomButton>
-          <CustomButton backgroundColor="bg-tertiary" textColor="text-black">
+          <CustomButton backgroundColor="bg-tertiary hover:bg-[#e2dede]" textColor="text-black">
             {overViewData.button.learnMore}
           </CustomButton>
         </FlexWrapper>
         <FlexWrapper justifyContent="flex-start" gap="gap-4">
-          <CustomButton backgroundColor="bg-tertiary" textColor="text-black">
+          <CustomButton backgroundColor="bg-tertiary hover:bg-[#e2dede]" textColor="text-black">
             <div className="font-bold">456+</div>
             {overViewData.button.projectDone}
           </CustomButton>
-          <CustomButton backgroundColor="bg-tertiary" textColor="text-black">
+          <CustomButton backgroundColor="bg-tertiary hover:bg-[#e2dede]" textColor="text-black">
             <h1 className="font-bold">156+</h1>
             {overViewData.button.teamMembers}
           </CustomButton>

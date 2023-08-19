@@ -10,6 +10,7 @@ import { mobile2 } from "../../assets";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsChevronDown, BsChevronRight } from "react-icons/bs";
 import ZigZag from "../CommonComponents/ZigZag";
+import CustomAccordion from "../Accordion/CustomAccordion";
 
 const HelpList = () => {
   const helpData = getArrayFromObj(data.help.steps);
@@ -39,25 +40,6 @@ const Troublesooting = () => {
         </div>
       </FlexWrapper>
     </>
-  );
-};
-
-const FrequentAskedQuestions = () => {
-  const questions = getArrayFromObj(data.help.frequentlyAsked.questions);
-  return (
-    <Container paddinged={false} className="!pb-20">
-      <div className={`${sectionTitle} text-center`}>{data.help.frequentlyAsked.title}</div>
-      <FlexWrapper justifyContent="justify-center" flexDirection="flex-col" className="w-full">
-        {questions.map((item) => (
-          <div className=" rounded-md m-auto my-2 bg-tertiary p-2 px-8 lg:w-[70%] md:w-[78%] w-[90%]">
-            <FlexWrapper className="justify-between items-center justify-items-center">
-              <div className={`${customText_2} w-[95%]`}>{item.value}</div>
-              <div className="font-semibold text-[1.2rem]">+</div>
-            </FlexWrapper>
-          </div>
-        ))}
-      </FlexWrapper>
-    </Container>
   );
 };
 
@@ -104,7 +86,7 @@ const Help = () => {
     <Container margined={false} className={`${mobileViewPadding}`}>
       <ZigZag title={data.help.title} description={<HelpList />} id={1} image={mobile2} backgroundColor="bg-white" descriptionStyle={"pl-8"}></ZigZag>
       <Troublesooting />
-      <FrequentAskedQuestions />
+      <CustomAccordion />
       <PopularQuestion />
     </Container>
   );

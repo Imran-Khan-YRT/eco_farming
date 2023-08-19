@@ -255,12 +255,28 @@
         },
         "frequentlyAsked": {
             "title": "Frequently Asked Questions",
-            "questions": {
-                "1": "How can 'MIMODZI' enhance crop management?",
-                "2": "What resource utilization optimization features does 'MIMODZI' offer?",
-                "3": "Does 'MIMODZI' help in combating pests and diseases?",
-                "4": "How does the real-time weather update feature work?"
-            }
+            "questions": [
+                {
+                    "id": 1,
+                    "question": "How can 'MIMODZI' enhance crop management?",
+                    "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "id": 2,
+                    "question": "What resource utilization optimization features does 'MIMODZI' offer?",
+                    "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "id": 3,
+                    "question": "Does 'MIMODZI' help in combating pests and diseases?",
+                    "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                },
+                {
+                    "id": 4,
+                    "question": "How does the real-time weather update feature work?",
+                    "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum  has been the industry's standard dummy"
+                }
+            ]
         },
         "popularQurstions": {
             "title": "How can we help you?",
