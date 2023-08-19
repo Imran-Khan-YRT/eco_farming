@@ -77,7 +77,7 @@ const HeaderMobile: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, handleClickOutside]);
 
   return (
     <Container margined={false} paddinged={false} className={`relative w-full !pt-0`}>

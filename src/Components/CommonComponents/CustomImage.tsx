@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactNode } from "react";
 interface ImageProps {
   // must mention width and height in style
   className: string;

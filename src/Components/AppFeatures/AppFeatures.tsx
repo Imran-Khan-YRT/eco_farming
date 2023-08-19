@@ -1,13 +1,9 @@
 import React from "react";
 import Container from "../CommonComponents/Container";
-import FlexWrapper from "../CommonComponents/FlexWrapper";
-import CustomImage from "../CommonComponents/CustomImage";
-import { feature_iphone13, feature_playIcon } from "../../assets";
+import { feature_iphone13 } from "../../assets";
 import data from "../../assets/combined/en/translation.json";
-import CustomButton from "../CommonComponents/CustomButton";
-import { mobileViewPadding, pageTitle } from "../../Utils/customStyles";
-import Section from "../CommonComponents/Section";
-import { image1, image2 } from "../../assets";
+import { mobileViewPadding } from "../../Utils/customStyles";
+import { image1 } from "../../assets";
 import ZigZag from "../CommonComponents/ZigZag";
 
 const AppFeatures = () => {

@@ -18,9 +18,9 @@ const ContactForm = () => {
         {isPc && (
           <>
             <img src={sideContact} alt="sidebar" className=" w-10 h-32 absolute bottom-2 -right-10 " />
-            <img src={contact_linkedIn} className="absolute w-7 h-7 bottom-24 -right-9" />
-            <img src={contact_twitter} className="absolute w-7 h-7  bottom-14 -right-9" />
-            <img src={contact_facebook} className="absolute w-7 h-7 bottom-4 -right-9" />
+            <img src={contact_linkedIn} alt="linkedIn" className="absolute w-7 h-7 bottom-24 -right-9" />
+            <img src={contact_twitter} alt="twitter" className="absolute w-7 h-7  bottom-14 -right-9" />
+            <img src={contact_facebook} alt="facebook" className="absolute w-7 h-7 bottom-4 -right-9" />
           </>
         )}
 
@@ -58,8 +58,6 @@ const ContactForm = () => {
     </SkewedBacground>
   );
 };
-
-const Location = () => {};
 
 const Contact = () => {
   return (

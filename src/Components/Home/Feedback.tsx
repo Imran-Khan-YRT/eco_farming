@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import "./feedback.css";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import Container from "../CommonComponents/Container";
-import { app_logo, left_arrow, person, right_arrow } from "../../assets";
-import CustomImage from "../CommonComponents/CustomImage";
-import { captionText, listText_2, listText_3 } from "../../Utils/customStyles";
+import { left_arrow, person, right_arrow } from "../../assets";
+import { captionText, listText_3 } from "../../Utils/customStyles";
 
 interface Feedback {
   name: string;

@@ -5,8 +5,7 @@ import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
 import "./microfinance.css";
 import CustomizedSteppers from "./Stepper";
-import { customText_0, customText_1, mobileViewPadding, pageTitle, sectionDescription, sectionTitle } from "../../Utils/customStyles";
-import { customText_2 } from "../../Utils/customStyles";
+import { customText_0, customText_1, mobileViewPadding } from "../../Utils/customStyles";
 
 const MicrofinanceWorkList = () => {
   const microData = getArrayFromObj(data.microfinance.process_to_microfinance);
