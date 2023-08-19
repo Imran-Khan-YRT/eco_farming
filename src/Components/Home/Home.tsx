@@ -114,9 +114,9 @@ const SustainableSolution = () => {
   const ShadowedImage: React.FC<shadowedImageProps> = ({ src = "", shadowPosition = "-left-2 -top-2" }) => {
     return (
       <>
-        <div className="relative">
+        <div className="relative w-40">
           <img src={src} alt="Top Half Shadow" className="relative w-full z-20 rounded-md" />
-          <div className={`absolute w-3/4 h-3/4 rounded-md bg-[#C3FFC3] ${shadowPosition}`}></div>
+          <div className={`absolute w-3/4 h-3/4 rounded-xl bg-[#C3FFC3] ${shadowPosition}`}></div>
         </div>
       </>
     );
@@ -124,7 +124,7 @@ const SustainableSolution = () => {
   return (
     <Container>
       <FlexWrapper justifyContent="justify-center" className="flex-wrap items-center gap-20">
-        <FlexWrapper gap="gap-20">
+        <FlexWrapper gap="md:gap-20 gap-8" className="!mx-4">
           <ShadowedImage src={home_women} />
           <ShadowedImage src={home_sell_field} shadowPosition="-left-2 -bottom-2" />
         </FlexWrapper>
