@@ -103,7 +103,9 @@ const HeaderMobile: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
                   handleLinkClick(menuItem.to);
                   scrollToTop();
                 }}
-                className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? " bg-white  border-[1px]  rounded-lg px-4 py-2  shadow-inner text-secondary " : ""}`}
+                className={`min-w-[150px] text-center hover:bg-white  hover:border-[1px]  hover:rounded-lg hover:px-4 hover:py-2 hover:shadow-inner hover:text-secondary  ${
+                  activeLink === menuItem.to ? " bg-white  border-[1px]  rounded-lg px-4 py-2  shadow-inner text-secondary " : ""
+                }`}
               >
                 {menuItem.text}
               </Link>
