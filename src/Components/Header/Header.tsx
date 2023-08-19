@@ -9,9 +9,11 @@ import CustomButton from "../CommonComponents/CustomButton";
 import CustomImage from "../CommonComponents/CustomImage";
 import Carousel from "../Home/Carousel";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
+import { scrollToTop } from "../../Utils/util";
 
 const HeaderPc = () => {
   const headerData = data.header.menu;
+  const [activeLink, setActiveLink] = useState("home");
   return (
     <Container margined={false} type="card" className="md:py-4 mb-0 shadow-md sticky top-0 z-50">
       {/*less y-padding margin bottom 0 for  sticky header */}
@@ -19,7 +21,15 @@ const HeaderPc = () => {
         <CustomImage src={app_logo} alt="app_logo" className="w-12 h-12"></CustomImage>
         <FlexWrapper gap="gap-8">
           {headerData.map((menuItem) => (
-            <Link to={menuItem.to} key={menuItem.to} className=" hover:underline">
+            <Link
+              to={menuItem.to}
+              key={menuItem.to}
+              onClick={() => {
+                setActiveLink(menuItem.to);
+                scrollToTop();
+              }}
+              className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? "border rounded-lg p-2 shadow-inner text-secondary font-bold" : ""}`}
+            >
               {menuItem.text}
             </Link>
           ))}
@@ -82,7 +92,14 @@ const HeaderMobile = () => {
         <Container className="w-[80%] fixed  top-24 z-50 border  rounded-xl shadow-sm shadow-[#CDE7C9] px-4 py-2" backgroundColor=" bg-tertiary">
           <FlexWrapper flexDirection="flex-col" gap="gap-4" className="py-4">
             {headerData.map((menuItem) => (
-              <Link to={menuItem.to} key={menuItem.to} onClick={() => handleLinkClick(menuItem.to)}>
+              <Link
+                to={menuItem.to}
+                key={menuItem.to}
+                onClick={() => {
+                  handleLinkClick(menuItem.to);
+                  scrollToTop();
+                }}
+              >
                 {menuItem.text}
               </Link>
             ))}
