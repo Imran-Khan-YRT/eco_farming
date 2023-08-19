@@ -1,7 +1,7 @@
 import React from "react";
 import FlexWrapper from "../CommonComponents/FlexWrapper";
 import Container from "../CommonComponents/Container";
-import { customText_0, customText_3, customText_2, listText_2, listText_3 } from "../../Utils/customStyles";
+import { customText_3, customText_2, listText_2, listText_3 } from "../../Utils/customStyles";
 import data from "../../assets/combined/en/translation.json";
 import { getArrayFromObj } from "../../Utils/util";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
@@ -84,7 +84,7 @@ const StepperMobile = () => {
 };
 
 const CustomizedSteppers = () => {
-  const { isPc, isTablet, isMobile } = useResponsiveContext();
+  const { isPc } = useResponsiveContext();
   return <>{isPc ? <StepperPC /> : <StepperMobile />}</>;
 };
 

@@ -8,7 +8,7 @@ import FlexWrapper from "../CommonComponents/FlexWrapper";
 import CustomImage from "../CommonComponents/CustomImage";
 import CustomButton from "../CommonComponents/CustomButton";
 import ZigZag from "../CommonComponents/ZigZag";
-import { captionText, customText_0, customText_1, customText_2, customText_3, customText_4, listText_1, listText_2, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
+import { customText_2, customText_4, listText_1, listText_3, pageTitle, sectionTitle } from "../../Utils/customStyles";
 import FeedbackComponent from "./Feedback";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import Carousel from "./Carousel";

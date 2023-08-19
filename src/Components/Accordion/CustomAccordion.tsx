@@ -3,7 +3,6 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Container from "../CommonComponents/Container";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
@@ -23,7 +22,7 @@ export default function CustomAccordion() {
     }
   };
 
-  console.log(expanded);
+  // console.log(expanded);
   return (
     <Container margined={false} paddinged={true}>
       <div className={`${sectionTitle} text-center`}>{data.help.frequentlyAsked.title}</div>

@@ -7,7 +7,6 @@ import data from "../../assets/combined/en/translation.json";
 import { Link } from "react-router-dom";
 import CustomButton from "../CommonComponents/CustomButton";
 import CustomImage from "../CommonComponents/CustomImage";
-import Carousel from "../Home/Carousel";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import { scrollToTop } from "../../Utils/util";
 

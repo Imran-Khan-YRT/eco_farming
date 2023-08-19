@@ -7,7 +7,7 @@ import data from "../../assets/combined/en/translation.json";
 
 import { footerIcons, footerButtons } from "../../assets";
 
-import { listText_2, captionText, customText_3, customText_2, customText_4 } from "../../Utils/customStyles";
+import { captionText, customText_4 } from "../../Utils/customStyles";
 import { scrollToTop } from "../../Utils/util";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import { Link } from "react-router-dom";
