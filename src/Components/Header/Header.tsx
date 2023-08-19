@@ -11,9 +11,13 @@ import Carousel from "../Home/Carousel";
 import { useResponsiveContext } from "../../Utils/useResponsive/ResponsiveContext";
 import { scrollToTop } from "../../Utils/util";
 
-const HeaderPc = () => {
+interface HeaderProps {
+  activeLink: string | null;
+  setActiveLink: (link: string) => void;
+}
+
+const HeaderPc: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
   const headerData = data.header.menu;
-  const [activeLink, setActiveLink] = useState("home");
   return (
     <Container margined={false} type="card" className="md:py-4 mb-0 shadow-md sticky top-0 z-50">
       {/*less y-padding margin bottom 0 for  sticky header */}
@@ -40,7 +44,7 @@ const HeaderPc = () => {
   );
 };
 
-const HeaderMobile = () => {
+const HeaderMobile: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerData = data.header.menu;
   const innerButtonRef = useRef<HTMLDivElement | null>(null);
@@ -54,6 +58,7 @@ const HeaderMobile = () => {
     setIsMenuOpen(false);
   };
   const handleLinkClick = (link: string) => {
+    setActiveLink(link);
     closeMenu();
   };
 
@@ -99,6 +104,7 @@ const HeaderMobile = () => {
                   handleLinkClick(menuItem.to);
                   scrollToTop();
                 }}
+                className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? " bg-white  border-[1px]  rounded-lg p-2 shadow-inner text-secondary " : ""}`}
               >
                 {menuItem.text}
               </Link>
@@ -112,10 +118,10 @@ const HeaderMobile = () => {
   );
 };
 
-const Header = () => {
+const Header: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
   const { isPc } = useResponsiveContext();
   // console.log(isMobile, isTablet, isPc);
-  return <>{isPc ? <HeaderPc /> : <HeaderMobile />}</>;
+  return <>{isPc ? <HeaderPc activeLink={activeLink} setActiveLink={setActiveLink} /> : <HeaderMobile activeLink={activeLink} setActiveLink={setActiveLink} />}</>;
 };
 
 export default Header;
