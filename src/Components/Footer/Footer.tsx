@@ -30,12 +30,12 @@ const Footer: React.FC<FooterProps> = ({ activeLink, setActiveLink }) => {
           {footerData.map((footerItem) => (
             <Link
               to={footerItem.to}
-              key={footerItem.to}
+              key={footerItem.key}
               onClick={() => {
-                setActiveLink(footerItem.to);
+                setActiveLink(footerItem.key);
                 scrollToTop();
               }}
-              className={`${customText_4} px-4 hover:text-secondary hover:font-[450] ${activeLink === footerItem.to ? "text-secondary" : ""}`}
+              className={`${customText_4} px-4 hover:text-secondary hover:font-[450] ${activeLink === footerItem.key ? "text-secondary" : ""}`}
             >
               {footerItem.text}
             </Link>

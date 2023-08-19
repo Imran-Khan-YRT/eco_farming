@@ -83,30 +83,37 @@
     "footer": {
         "items": [
             {
+                "key": "appOverview IOS",
                 "to": "appOverview",
                 "text": "Download IOS APP"
             },
             {
+                "key": "appOverview Android",
                 "to": "appOverview",
                 "text": "Download Android App"
             },
             {
+                "key": "features",
                 "to": "features",
                 "text": "Explore App Features"
             },
             {
+                "key": "help",
                 "to": "help",
                 "text": "Help and Support"
             },
             {
+                "key": "contact",
                 "to": "contact",
                 "text": "Contact us"
             },
             {
+                "key": "terms",
                 "to": "terms",
                 "text": "Terms & Condition"
             },
             {
+                "key": "privacy",
                 "to": "privacy",
                 "text": "Privacy and Policy"
             }
