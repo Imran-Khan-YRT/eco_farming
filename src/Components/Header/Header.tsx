@@ -31,7 +31,7 @@ const HeaderPc: React.FC<HeaderProps> = ({ activeLink, setActiveLink }) => {
                 setActiveLink(menuItem.to);
                 scrollToTop();
               }}
-              className={`hover:text-secondary hover:font-bold ${activeLink === menuItem.to ? " border rounded-lg px-4 py-2 shadow-inner text-secondary font-bold" : ""}`}
+              className={`hover:text-secondary hover:font-semibold ${activeLink === menuItem.to ? "rounded-lg px-4 py-2 shadow-inner text-secondary font-bold text-opacity-90" : ""}`}
             >
               {menuItem.text}
             </Link>
